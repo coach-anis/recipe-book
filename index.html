@@ -1,0 +1,2670 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كتاب الوصفات | Coach Anis</title>
+
+<!-- ── Open Graph / Social Media Preview ── -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="أقوى كتاب تغذية | 50 وصفة حصرية - Coach Anis" />
+<meta property="og:description" content="50 وصفة غذائية حصرية للمشتركين فقط! أطلق العنان لطاقتك مع Coach Anis." />
+<meta property="og:image"       content="preview.png" />
+<meta property="og:image:width" content="1400" />
+<meta property="og:image:height" content="734" />
+<meta property="og:image:alt"   content="كتاب تغذية Coach Anis - 50 وصفة حصرية" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="أقوى كتاب تغذية | 50 وصفة حصرية - Coach Anis" />
+<meta name="twitter:description" content="50 وصفة غذائية حصرية للمشتركين فقط! أطلق العنان لطاقتك مع Coach Anis." />
+<meta name="twitter:image"       content="preview.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+/* ── PRINT SETUP ── */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white !important; }
+  .page { page-break-after: always; box-shadow: none !important; }
+  .page:last-child { page-break-after: avoid; }
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  background: #1a1a1a;
+  font-family: 'Cairo', sans-serif;
+  color: #1a1a1a;
+}
+
+/* ── PRINT BUTTON ── */
+.print-bar {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: #0F0F0F;
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding: 12px 24px;
+  display: flex; align-items: center; gap: 16px;
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.print-bar span {
+  color: #666; font-size: 13px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.btn-print {
+  background: linear-gradient(135deg, #C9A84C, #E8C97A);
+  color: #000; border: none;
+  border-radius: 8px; padding: 10px 24px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 14px; font-weight: 900;
+  cursor: pointer; transition: all .2s;
+}
+
+.btn-print:hover { box-shadow: 0 4px 16px rgba(201,168,76,.4); transform: translateY(-1px); }
+
+/* ── PAGES CONTAINER ── */
+.pages {
+  padding: 80px 20px 40px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 24px;
+}
+
+/* ── PAGE BASE ── */
+.page {
+  width: 100%;
+  max-width: 210mm;
+  min-height: 297mm;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,.5);
+}
+
+/* RESPONSIVE FOR MOBILE */
+@media (max-width: 768px) {
+  .page {
+    min-height: auto;
+    max-width: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    margin-bottom: 16px;
+  }
+  
+  .print-bar {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .pages {
+    padding: 70px 10px 20px;
+    gap: 16px;
+  }
+}
+
+/* ════════════════════════════════
+   COVER PAGE
+════════════════════════════════ */
+.cover {
+  background: #080808;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 297mm;
+}
+
+.cover-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 60%);
+}
+
+.cover-grid {
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(201,168,76,0.03) 40px, rgba(201,168,76,0.03) 41px),
+    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(201,168,76,0.03) 40px, rgba(201,168,76,0.03) 41px);
+}
+
+.cover-content {
+  position: relative; z-index: 1;
+  text-align: center; padding: 60px 50px;
+  display: flex; flex-direction: column; align-items: center;
+}
+
+.cover-badge {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 6px; font-size: 11px;
+  color: #C9A84C; opacity: .8;
+  margin-bottom: 28px;
+  border: 1px solid rgba(201,168,76,.3);
+  padding: 6px 20px; border-radius: 20px;
+}
+
+.cover-title-en {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px; letter-spacing: 4px;
+  color: white; line-height: .9;
+  margin-bottom: 8px;
+}
+
+.cover-title-ar {
+  font-size: 42px; font-weight: 900;
+  color: #C9A84C; line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.cover-divider {
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+  margin: 0 auto 32px;
+}
+
+.cover-sub {
+  font-size: 16px; color: rgba(255,255,255,.6);
+  line-height: 1.8; max-width: 320px;
+  margin-bottom: 48px;
+}
+
+.cover-cats {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  justify-content: center; margin-bottom: 60px;
+}
+
+.cover-cat {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px; font-weight: 700;
+  border: 1px solid;
+}
+
+.cover-stats {
+  display: flex; gap: 40px;
+  border-top: 1px solid rgba(201,168,76,.2);
+  padding-top: 32px;
+}
+
+.cover-stat { text-align: center; }
+.cover-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px; color: #C9A84C;
+  line-height: 1;
+}
+.cover-stat-lbl {
+  font-size: 11px; color: rgba(255,255,255,.4);
+  letter-spacing: 2px; margin-top: 4px;
+}
+
+.cover-handle {
+  position: absolute; bottom: 32px;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 4px; font-size: 12px;
+  color: rgba(255,255,255,.3);
+}
+
+@media (max-width: 768px) {
+  .cover-title-en { font-size: 48px; }
+  .cover-title-ar { font-size: 32px; }
+  .cover-content { padding: 40px 30px; }
+  .cover-cats { gap: 8px; }
+  .cover-cat { font-size: 11px; padding: 6px 12px; }
+  .cover-stats { gap: 20px; }
+}
+
+/* ════════════════════════════════
+   TOC PAGE
+════════════════════════════════ */
+.toc-page { padding: 50px 50px; }
+
+.page-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 36px; padding-bottom: 16px;
+  border-bottom: 2px solid #C9A84C;
+}
+
+.page-header-icon {
+  width: 44px; height: 44px;
+  background: #080808; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+
+.page-header-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px; letter-spacing: 2px;
+  color: #080808;
+}
+
+.page-header-en {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px; letter-spacing: 3px;
+  color: #C9A84C; opacity: .7;
+}
+
+.toc-section { margin-bottom: 24px; }
+
+.toc-section-title {
+  font-size: 13px; font-weight: 900;
+  color: white; padding: 8px 14px;
+  border-radius: 6px; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.toc-items { display: flex; flex-direction: column; gap: 4px; }
+
+.toc-item {
+  display: flex; justify-content: space-between;
+  align-items: center; padding: 6px 14px;
+  font-size: 12px; color: #444;
+  border-bottom: 1px dotted #e0e0e0;
+}
+
+.toc-item:hover { background: #f9f9f9; }
+.toc-num { font-family: 'Bebas Neue', sans-serif; color: #C9A84C; font-size: 13px; }
+
+@media (max-width: 768px) {
+  .toc-page { padding: 30px 20px; }
+  .page-header-title { font-size: 20px; }
+  .toc-item { font-size: 11px; padding: 4px 10px; }
+}
+
+/* ════════════════════════════════
+   SECTION DIVIDER PAGE
+════════════════════════════════ */
+.section-divider {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 297mm;
+}
+
+.sd-bg {
+  position: absolute; inset: 0;
+}
+
+.sd-content {
+  position: relative; z-index: 1;
+  text-align: center; padding: 40px;
+}
+
+.sd-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 120px; line-height: 1;
+  opacity: .08; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.sd-icon { font-size: 64px; margin-bottom: 24px; display: block; }
+.sd-en {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 6px; font-size: 13px;
+  margin-bottom: 12px;
+}
+.sd-title {
+  font-size: 36px; font-weight: 900;
+  color: white; margin-bottom: 16px;
+}
+.sd-desc { font-size: 14px; opacity: .6; color: white; max-width: 280px; margin: 0 auto; line-height: 1.8; }
+
+@media (max-width: 768px) {
+  .section-divider { min-height: auto; padding: 40px 20px; }
+  .sd-num { font-size: 80px; }
+  .sd-icon { font-size: 48px; }
+  .sd-title { font-size: 28px; }
+  .sd-desc { font-size: 12px; }
+}
+
+/* ════════════════════════════════
+   RECIPE PAGE
+════════════════════════════════ */
+.recipe-page { padding: 0; }
+
+.recipe-header {
+  padding: 32px 44px 24px;
+  position: relative;
+}
+
+.recipe-header::after {
+  content: '';
+  position: absolute; bottom: 0; left: 44px; right: 44px;
+  height: 1px; background: #eee;
+}
+
+.recipe-num-badge {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 10px; letter-spacing: 3px;
+  padding: 3px 12px; border-radius: 12px;
+  display: inline-block; margin-bottom: 12px;
+}
+
+.recipe-name {
+  font-size: 28px; font-weight: 900;
+  color: #080808; line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.recipe-desc {
+  font-size: 13px; color: #888;
+  line-height: 1.6; font-style: italic;
+}
+
+/* MACRO BAR */
+.macro-bar {
+  display: flex; gap: 0;
+  margin: 0 44px 24px;
+  border-radius: 10px; overflow: hidden;
+  border: 1px solid #eee;
+  margin-top: 24px;
+}
+
+.macro-cell {
+  flex: 1; text-align: center; padding: 12px 8px;
+  border-left: 1px solid #eee;
+  position: relative;
+}
+
+.macro-cell:last-child { border-left: none; }
+.macro-cell::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.macro-cell.kcal::before { background: #C9A84C; }
+.macro-cell.prot::before { background: #E8A87A; }
+.macro-cell.carb::before { background: #7AB8E8; }
+.macro-cell.fat::before  { background: #E87A7A; }
+
+.macro-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px; line-height: 1;
+}
+.macro-cell.kcal .macro-val { color: #C9A84C; }
+.macro-cell.prot .macro-val { color: #E8A87A; }
+.macro-cell.carb .macro-val { color: #7AB8E8; }
+.macro-cell.fat  .macro-val { color: #E87A7A; }
+
+.macro-lbl { font-size: 9px; color: #aaa; letter-spacing: 1px; margin-top: 3px; }
+
+/* RECIPE BODY */
+.recipe-body { 
+  padding: 0 44px 32px; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 28px; 
+}
+
+.recipe-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 11px; letter-spacing: 3px;
+  color: #C9A84C; margin-bottom: 12px;
+  padding-bottom: 6px; border-bottom: 1px solid #f0f0f0;
+}
+
+.ing-list { display: flex; flex-direction: column; gap: 7px; }
+
+.ing-item {
+  display: flex; justify-content: space-between;
+  align-items: center; font-size: 12px;
+  padding: 5px 0; border-bottom: 1px dotted #f0f0f0;
+}
+
+.ing-name { color: #333; }
+.ing-qty {
+  font-weight: 700; color: #C9A84C;
+  font-size: 11px; background: #FBF6EC;
+  padding: 2px 8px; border-radius: 10px;
+}
+
+.steps-list { display: flex; flex-direction: column; gap: 10px; }
+
+.step-item { display: flex; gap: 10px; align-items: flex-start; }
+
+.step-n {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: #080808; color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 11px;
+  flex-shrink: 0; margin-top: 1px;
+}
+
+.step-text { font-size: 12px; color: #444; line-height: 1.6; }
+
+.recipe-tip {
+  margin: 0 44px 24px;
+  background: #FBF6EC;
+  border-right: 3px solid #C9A84C;
+  border-radius: 8px; padding: 12px 16px;
+  font-size: 12px; color: #666; line-height: 1.6;
+}
+
+.recipe-tip strong { color: #C9A84C; }
+
+/* TIME BADGE */
+.recipe-meta {
+  display: flex; gap: 12px; margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.meta-tag {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 11px; color: #888;
+  background: #f5f5f5; padding: 4px 10px;
+  border-radius: 12px;
+}
+
+/* PAGE FOOTER */
+.page-footer {
+  position: absolute; bottom: 20px; left: 44px; right: 44px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 9px; letter-spacing: 2px; color: #ccc;
+  border-top: 1px solid #f0f0f0; padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .recipe-header { padding: 20px 20px 16px; }
+  .recipe-header::after { left: 20px; right: 20px; }
+  .macro-bar { margin: 0 20px 16px; }
+  .recipe-body { padding: 0 20px 20px; grid-template-columns: 1fr; gap: 20px; }
+  .recipe-name { font-size: 22px; }
+  .recipe-desc { font-size: 12px; }
+  .recipe-tip { margin: 0 20px 16px; padding: 10px 12px; font-size: 11px; }
+  .page-footer { left: 20px; right: 20px; font-size: 8px; }
+  .ing-item { font-size: 11px; }
+  .step-text { font-size: 11px; }
+  .macro-val { font-size: 20px; }
+}
+
+/* BACK COVER */
+.back-cover {
+  background: #080808;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 297mm; text-align: center;
+  padding: 60px;
+}
+
+.back-cover-content { position: relative; z-index: 1; }
+
+.back-qr {
+  width: 100px; height: 100px;
+  background: white; border-radius: 12px;
+  margin: 0 auto 24px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: #333; text-align: center; padding: 10px;
+  font-weight: 700; line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .back-cover { padding: 40px 20px; min-height: auto; }
+  .back-qr { width: 80px; height: 80px; font-size: 10px; }
+}
+
+/* ── GATE OVERLAY ── */
+#gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#gate-overlay.hide {
+  animation: gateFadeOut 0.6s ease forwards;
+  pointer-events: none;
+}
+@keyframes gateFadeOut {
+  to { opacity: 0; transform: scale(1.03); }
+}
+#gate-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.gate-particles { position:absolute;inset:0;pointer-events:none;overflow:hidden; }
+.gate-particle {
+  position:absolute; width:2px; height:2px;
+  background:#C9A84C; border-radius:50%; opacity:0;
+  animation: gfloat linear infinite;
+}
+@keyframes gfloat {
+  0%   { opacity:0; transform:translateY(100vh) scale(0); }
+  10%  { opacity:0.6; }
+  90%  { opacity:0.3; }
+  100% { opacity:0; transform:translateY(-10vh) scale(1.5); }
+}
+.gate-card {
+  position:relative; z-index:10;
+  background:linear-gradient(160deg,#161616 0%,#111111 100%);
+  border:1px solid rgba(201,168,76,0.25);
+  border-radius:24px; padding:56px 48px;
+  width:100%; max-width:440px; text-align:center;
+  box-shadow:0 0 0 1px rgba(201,168,76,0.05),0 32px 80px rgba(0,0,0,.7),0 0 60px rgba(201,168,76,0.06);
+  animation:gcardIn .8s cubic-bezier(0.16,1,0.3,1) both;
+}
+@keyframes gcardIn {
+  from{opacity:0;transform:translateY(30px) scale(0.97);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+.gate-card::before {
+  content:''; position:absolute; top:0; left:50%; transform:translateX(-50%);
+  width:60%; height:1px;
+  background:linear-gradient(90deg,transparent,#C9A84C,transparent);
+}
+.gate-lock {
+  width:72px;height:72px;margin:0 auto 28px;
+  background:linear-gradient(135deg,#1e1c18,#2a2720);
+  border:1px solid rgba(201,168,76,0.3); border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:28px;
+  box-shadow:0 0 30px rgba(201,168,76,0.1),inset 0 1px 0 rgba(255,255,255,0.05);
+  animation:gpulse 3s ease-in-out infinite;
+}
+@keyframes gpulse {
+  0%,100%{box-shadow:0 0 30px rgba(201,168,76,0.1),inset 0 1px 0 rgba(255,255,255,0.05);}
+  50%{box-shadow:0 0 50px rgba(201,168,76,0.2),inset 0 1px 0 rgba(255,255,255,0.05);}
+}
+.gate-brand {
+  font-family:'Bebas Neue',sans-serif;font-size:13px;
+  letter-spacing:4px;color:#C9A84C;margin-bottom:10px;opacity:.8;
+}
+.gate-title { font-size:26px;font-weight:900;color:#fff;line-height:1.3;margin-bottom:8px; }
+.gate-sub { font-size:14px;color:#555;margin-bottom:40px;line-height:1.6; }
+.gate-input-wrap { position:relative;margin-bottom:16px; }
+.gate-input-wrap input {
+  width:100%; background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08); border-radius:12px;
+  padding:16px 50px 16px 20px;
+  font-family:'Cairo',sans-serif; font-size:18px; font-weight:600;
+  color:#fff; text-align:center; letter-spacing:6px; outline:none;
+  transition:all .3s; caret-color:#C9A84C;
+}
+.gate-input-wrap input::placeholder { letter-spacing:2px;font-size:14px;font-weight:400;color:#333; }
+.gate-input-wrap input:focus {
+  border-color:rgba(201,168,76,.5);background:rgba(201,168,76,.04);
+  box-shadow:0 0 0 3px rgba(201,168,76,.08);
+}
+.gate-input-wrap input.gerror {
+  border-color:rgba(220,60,60,.5);background:rgba(220,60,60,.04);
+  animation:gshake .4s ease;
+}
+.gate-input-wrap input.gsuccess { border-color:rgba(80,200,120,.5);background:rgba(80,200,120,.04); }
+@keyframes gshake {
+  0%,100%{transform:translateX(0);}
+  20%{transform:translateX(-8px);}
+  40%{transform:translateX(8px);}
+  60%{transform:translateX(-5px);}
+  80%{transform:translateX(5px);}
+}
+.gate-eye {
+  position:absolute;left:16px;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;font-size:18px;color:#444;
+  transition:color .2s;padding:4px;
+}
+.gate-eye:hover{color:#C9A84C;}
+.gate-err { color:#e05555;font-size:13px;margin-bottom:16px;min-height:20px;
+  transition:opacity .3s;display:flex;align-items:center;justify-content:center;gap:6px; }
+.gate-btn {
+  width:100%;background:linear-gradient(135deg,#C9A84C,#E8C97A,#C9A84C);
+  background-size:200% 200%; color:#000; border:none; border-radius:12px;
+  padding:16px 32px; font-family:'Cairo',sans-serif;
+  font-size:16px;font-weight:900;cursor:pointer;transition:all .3s;
+  position:relative;overflow:hidden;letter-spacing:1px;
+}
+.gate-btn:hover { background-position:right center;transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.4); }
+.gate-btn:active{transform:translateY(0);}
+.gate-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent);border-radius:inherit;}
+.gate-btn.gloading{pointer-events:none;opacity:.7;}
+.gate-success-wrap {
+  position:absolute;inset:0;background:#0d0d0d;z-index:5;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  opacity:0;pointer-events:none;transition:opacity .4s;
+}
+.gate-success-wrap.show{opacity:1;pointer-events:all;}
+.gate-check {
+  width:80px;height:80px;background:linear-gradient(135deg,#C9A84C,#E8C97A);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px;
+  animation:gpopIn .5s cubic-bezier(.16,1,.3,1) both;
+}
+@keyframes gpopIn{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+.gate-success-wrap p{color:#C9A84C;font-size:18px;font-weight:700;animation:gfadeUp .5s .2s both;}
+@keyframes gfadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.gate-prog{width:200px;height:3px;background:rgba(201,168,76,.2);border-radius:10px;overflow:hidden;animation:gfadeUp .5s .3s both;}
+.gate-prog-fill{height:100%;background:linear-gradient(90deg,#C9A84C,#E8C97A);border-radius:inherit;width:0%;transition:width 1.5s ease;}
+@media(max-width:480px){.gate-card{padding:40px 24px;margin:16px;}.gate-title{font-size:22px;}}
+</style>
+</head>
+<body>
+
+<!-- ── CODE GATE ── -->
+<div id="gate-overlay">
+  <div class="gate-particles" id="gateParticles"></div>
+  <div class="gate-card">
+    <div class="gate-lock">🔐</div>
+    <div class="gate-brand">COACH ANIS</div>
+    <h2 class="gate-title">كتاب الوصفات الخاص</h2>
+    <p class="gate-sub">أدخل كود الدخول للوصول إلى الكتاب</p>
+    <div class="gate-input-wrap">
+      <input type="password" id="gateInput" placeholder="• • • • • • • •" maxlength="20" autocomplete="off" spellcheck="false"/>
+      <button class="gate-eye" id="gateEye" title="إظهار/إخفاء">👁</button>
+    </div>
+    <div class="gate-err" id="gateErr"></div>
+    <button class="gate-btn" id="gateBtn" onclick="gateCheck()">دخول ←</button>
+    <div class="gate-success-wrap" id="gateSuccess">
+      <div class="gate-check">✓</div>
+      <p>مرحباً بك! جارٍ الدخول...</p>
+      <div class="gate-prog"><div class="gate-prog-fill" id="gateProgFill"></div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PRINT BAR -->
+<div class="print-bar no-print">
+  <span>📚 كتاب وصفات Coach Anis — 50 وصفة رياضية</span>
+  <button class="btn-print" onclick="window.print()">🖨 طباعة / حفظ PDF</button>
+</div>
+
+<div class="pages">
+
+<!-- ════════ COVER ════════ -->
+<div class="page cover">
+  <div class="cover-bg"></div>
+  <div class="cover-grid"></div>
+  <div class="cover-content">
+    <div class="cover-badge">EXCLUSIVE · حصري للمشتركين</div>
+    <div class="cover-title-en">NUTRITION<br>COOKBOOK</div>
+    <div class="cover-title-ar">كتاب الوصفات الرياضية</div>
+    <div class="cover-divider"></div>
+    <div class="cover-sub">50 وصفة رياضية علمية مع الماكرو الكامل — مصممة خصيصاً للرياضيين الجادين</div>
+    <div class="cover-cats">
+      <div class="cover-cat" style="color:#E8A87A;border-color:#E8A87A33;background:#E8A87A11">🌅 إفطار عالي بروتين</div>
+      <div class="cover-cat" style="color:#7AE8B8;border-color:#7AE8B833;background:#7AE8B811">🔥 وجبات تنشيف</div>
+      <div class="cover-cat" style="color:#7AB8E8;border-color:#7AB8E833;background:#7AB8E811">💪 وجبات تضخيم</div>
+      <div class="cover-cat" style="color:#C97AE8;border-color:#C97AE833;background:#C97AE811">🥜 سناك صحي</div>
+      <div class="cover-cat" style="color:#E8E87A;border-color:#E8E87A33;background:#E8E87A11">🍝 ما بعد التمرين</div>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="cover-stat-num">50</div><div class="cover-stat-lbl">RECIPE</div></div>
+      <div class="cover-stat"><div class="cover-stat-num">5</div><div class="cover-stat-lbl">CATEGORY</div></div>
+      <div class="cover-stat"><div class="cover-stat-num">100%</div><div class="cover-stat-lbl">SCIENCE</div></div>
+    </div>
+  </div>
+  <div class="cover-handle">COACH ANIS · @coach__anis · 2025</div>
+</div>
+
+<!-- ════════ TOC ════════ -->
+<div class="page toc-page">
+  <div class="page-header">
+    <div class="page-header-icon">📋</div>
+    <div>
+      <div class="page-header-en">TABLE OF CONTENTS</div>
+      <div class="page-header-title">فهرس الكتاب</div>
+    </div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title" style="background:#E8A87A;color:white">🌅 إفطار عالي بروتين</div>
+    <div class="toc-items">
+      <div class="toc-item"><span>بيض مخفوق بالشوفان والجبن</span><span class="toc-num">01</span></div>
+      <div class="toc-item"><span>بان كيك البروتين بالموز</span><span class="toc-num">02</span></div>
+      <div class="toc-item"><span>زبادي يوناني بالتوت والمكسرات</span><span class="toc-num">03</span></div>
+      <div class="toc-item"><span>توست البيض والأفوكادو</span><span class="toc-num">04</span></div>
+      <div class="toc-item"><span>أوملت الخضروات والدجاج</span><span class="toc-num">05</span></div>
+      <div class="toc-item"><span>شوفان الليل بالبروتين</span><span class="toc-num">06</span></div>
+      <div class="toc-item"><span>فريتاتا الخضروات</span><span class="toc-num">07</span></div>
+      <div class="toc-item"><span>كريب البروتين بالفراولة</span><span class="toc-num">08</span></div>
+      <div class="toc-item"><span>شيك الموز والفول السوداني</span><span class="toc-num">09</span></div>
+      <div class="toc-item"><span>فطيرة الشوفان المالتة</span><span class="toc-num">10</span></div>
+    </div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title" style="background:#7AE8B8;color:#080808">🔥 وجبات تنشيف</div>
+    <div class="toc-items">
+      <div class="toc-item"><span>سلطة التونة المشوية</span><span class="toc-num">11</span></div>
+      <div class="toc-item"><span>دجاج مشوي مع ال��ضروات</span><span class="toc-num">12</span></div>
+      <div class="toc-item"><span>شوربة العدس بالدجاج</span><span class="toc-num">13</span></div>
+      <div class="toc-item"><span>سمك مشوي مع الأرز البني</span><span class="toc-num">14</span></div>
+      <div class="toc-item"><span>سلطة الكينوا بالجمبري</span><span class="toc-num">15</span></div>
+      <div class="toc-item"><span>دجاج تيريياكي خفيف</span><span class="toc-num">16</span></div>
+      <div class="toc-item"><span>بيض مسلوق مع خضروات بخار</span><span class="toc-num">17</span></div>
+      <div class="toc-item"><span>شوربة الطماطم بالدجاج</span><span class="toc-num">18</span></div>
+      <div class="toc-item"><span>سلطة السبانخ والتونة</span><span class="toc-num">19</span></div>
+      <div class="toc-item"><span>رول الدجاج بالخس</span><span class="toc-num">20</span></div>
+    </div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title" style="background:#7AB8E8;color:white">💪 وجبات تضخيم</div>
+    <div class="toc-items">
+      <div class="toc-item"><span>رز بالدجاج وصوص الفول السوداني</span><span class="toc-num">21</span></div>
+      <div class="toc-item"><span>مكرونة بالدجاج والكريمة</span><span class="toc-num">22</span></div>
+      <div class="toc-item"><span>بطاطا حلوة بالتونة والأفوكادو</span><span class="toc-num">23</span></div>
+      <div class="toc-item"><span>برجر الدجاج الرياضي</span><span class="toc-num">24</span></div>
+      <div class="toc-item"><span>طاجين اللحم بالخضروات</span><span class="toc-num">25</span></div>
+      <div class="toc-item"><span>أرز بالكاري والدجاج</span><span class="toc-num">26</span></div>
+      <div class="toc-item"><span>باستا البروتين بالبيض</span><span class="toc-num">27</span></div>
+      <div class="toc-item"><span>لحم مفروم مع الكينوا</span><span class="toc-num">28</span></div>
+      <div class="toc-item"><span>صدر دجاج محشو بالجبن</span><span class="toc-num">29</span></div>
+      <div class="toc-item"><span>بيريتو البروتين</span><span class="toc-num">30</span></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>COACH ANIS · @coach__anis</span>
+    <span>فهرس المحتويات</span>
+    <span>2025</span>
+  </div>
+</div>
+
+<!-- TOC PAGE 2 -->
+<div class="page toc-page">
+  <div class="toc-section">
+    <div class="toc-section-title" style="background:#C97AE8;color:white">🥜 سناك صحي</div>
+    <div class="toc-items">
+      <div class="toc-item"><span>كرات الطاقة بالشوفان والعسل</span><span class="toc-num">31</span></div>
+      <div class="toc-item"><span>كريب البروتين بالموز</span><span class="toc-num">32</span></div>
+      <div class="toc-item"><span>شيك البروتين الطبيعي</span><span class="toc-num">33</span></div>
+      <div class="toc-item"><span>حمص محلي مع الخضروات</span><span class="toc-num">34</span></div>
+      <div class="toc-item"><span>تفاح بزبدة الفول السوداني</span><span class="toc-num">35</span></div>
+      <div class="toc-item"><span>مكسرات وفواكه مجففة</span><span class="toc-num">36</span></div>
+      <div class="toc-item"><span>جبن قريش بالخيار</span><span class="toc-num">37</span></div>
+      <div class="toc-item"><span>بار الشوفان محلي الصنع</span><span class="toc-num">38</span></div>
+      <div class="toc-item"><span>موس الشوكولاتة الرياضي</span><span class="toc-num">39</span></div>
+      <div class="toc-item"><span>عصير الطاقة الطبيعي</span><span class="toc-num">40</span></div>
+    </div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title" style="background:#E8E87A;color:#080808">🍝 ما بعد التمرين</div>
+    <div class="toc-items">
+      <div class="toc-item"><span>شيك الاسترداد السريع</span><span class="toc-num">41</span></div>
+      <div class="toc-item"><span>رز أبيض بالدجاج المسلوق</span><span class="toc-num">42</span></div>
+      <div class="toc-item"><span>بطاطا مشوية بالتونة</span><span class="toc-num">43</span></div>
+      <div class="toc-item"><span>موز مع الزبادي والعسل</span><span class="toc-num">44</span></div>
+      <div class="toc-item"><span>ساندويش الدجاج السريع</span><span class="toc-num">45</span></div>
+      <div class="toc-item"><span>عصيدة الشوفان بالبروتين</span><span class="toc-num">46</span></div>
+      <div class="toc-item"><span>سمك التونة مع التوست</span><span class="toc-num">47</span></div>
+      <div class="toc-item"><span>شيك الكلا البروتيني</span><span class="toc-num">48</span></div>
+      <div class="toc-item"><span>أرز بالبيض المقلي</span><span class="toc-num">49</span></div>
+      <div class="toc-item"><span>وجبة الاسترداد الملكية</span><span class="toc-num">50</span></div>
+    </div>
+  </div>
+
+  <div style="background:#080808;border-radius:12px;padding:20px;margin-top:20px;text-align:center">
+    <div style="font-family:'Bebas Neue',sans-serif;letter-spacing:3px;font-size:11px;color:#C9A84C;margin-bottom:8px">ملاحظة مهمة · IMPORTANT NOTE</div>
+    <div style="font-size:12px;color:rgba(255,255,255,.6);line-height:1.7">جميع الوصفات محسوبة علمياً بناءً على مبادئ التغذية الرياضية. الأرقام تقريبية وقد تختلف حسب المكونات المستخدمة.</div>
+  </div>
+
+  <div class="page-footer">
+    <span>COACH ANIS · @coach__anis</span>
+    <span>فهرس المحتويات</span>
+    <span>2025</span>
+  </div>
+</div>
+
+<!-- ════════ SECTION 1 DIVIDER ════════ -->
+<div class="page section-divider" style="background:linear-gradient(135deg,#1a0e00,#080808)">
+  <div class="sd-num" style="color:#E8A87A">BREAKFAST</div>
+  <div class="sd-content">
+    <span class="sd-icon">🌅</span>
+    <div class="sd-en" style="color:#E8A87A">SECTION ONE · HIGH PROTEIN BREAKFAST</div>
+    <div class="sd-title">إفطار عالي البروتين</div>
+    <div class="sd-desc">10 وصفات إفطار مصممة لتزويدك بالطاقة والبروتين لبداية يوم رياضي مثالي</div>
+  </div>
+</div>
+
+<!-- RECIPE 01 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 01</div>
+    <div class="recipe-name">بيض مخفوق بالشوفان والجبن</div>
+    <div class="recipe-desc">إفطار كلاسيكي غني بالبروتين — يمنحك طاقة مستدامة وشعور بالشبع</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 10 دقائق</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">🔥 سهل</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">450</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">40g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">35g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">14g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بيض كامل</span><span class="ing-qty">3 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">بياض بيض</span><span class="ing-qty">3 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">شوفان مطحون</span><span class="ing-qty">40g</span></div>
+        <div class="ing-item"><span class="ing-name">جبن كريمي 0%</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">حليب خالي الدسم</span><span class="ing-qty">50ml</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+        <div class="ing-item"><span class="ing-name">ملح وفلفل</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">سخّن الشوفان مع الحليب 3 دقائق</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخفق البيض مع البياض والجبن</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">سخّن مقلاة مع زيت الزيتون</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اسكب البيض وقلّبه حتى ينضج</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">ضع الشوفان ثم البيض فوقه</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> أضف فلفل حار لتسريع الأيض. تناول قبل ساعة من التمرين.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 01</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 02 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 02</div>
+    <div class="recipe-name">بان كيك البروتين بالموز</div>
+    <div class="recipe-desc">فطائر صحية لذيذة — بدون دقيق أبيض أو سكر مضاف</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 3-4 فطائر</div><div class="meta-tag">🔥 سهل</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">380</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">35g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">30g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">10g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">موز ناضج</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">بياض بيض</span><span class="ing-qty">4 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">بروتين فانيلا</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">شوفان مطحون</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">بيكنج باودر</span><span class="ing-qty">نصف ملعقة</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة</span><span class="ing-qty">رشة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اهرس الموز حتى يصبح كريمياً</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف البياض والشوفان والبروتين والبيكنج باودر</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اخفق المزيج جيد��ً</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">سخّن مقلاة غير لاصقة على نار هادئة</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">اسكب كميات صغيرة واقلبها عند ظهور الفقاعات</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الموز الأسود يعطي حلاوة طبيعية. يمكن التحضير الليلة السابقة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 02</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 03 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 03</div>
+    <div class="recipe-name">زبادي يوناني بالتوت</div>
+    <div class="recipe-desc">إفطار سريع بدون طهي — مثالي للأيام المزدحمة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 5 دقائق</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ سريع جداً</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">350</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">30g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">28g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">12g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">زبادي يوناني 0%</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">بروتين فانيلا</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">توت أحمر/أزرق</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">لوز مقطع</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل طبيعي</span><span class="ing-qty">5ml</span></div>
+        <div class="ing-item"><span class="ing-name">بذور الشيا</span><span class="ing-qty">5g</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخفق البروتين مع الزبادي</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">ضع الخليط في كوب</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف التوت فوقه</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">رش اللوز وبذور الشيا</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">أضف قليلاً من العسل وتناول فوراً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> تحضير Overnight Bowl — ضعه في الثلاجة للصباح لقوام أكثر كثافة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 03</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 04 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 04</div>
+    <div class="recipe-name">توست البيض والأفوكادو</div>
+    <div class="recipe-desc">إفطار فاخر وصحي — دهون أحادية غير مشبعة مع بروتين عالي</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 10 دقائق</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 متوازن</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">420</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">18g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">32g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">20g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">خبز بر كامل</span><span class="ing-qty">2 شريحة</span></div>
+        <div class="ing-item"><span class="ing-name">بيض</span><span class="ing-qty">2 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">أفوكادو</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ملح وفلفل</span><span class="ing-qty">حسب الذوق</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">حمّص الخبز حتى يصبح ذهبياً</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اقلِ البيض في مقلاة مع زيت الزيتون</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">هرّس الأفوكادو برفق مع قليل من الملح</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضع الأفوكادو على التوست</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">ضع البيض والطماطم فوقه وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الأفوكادو يحسن امتصاص الفيتامينات الذائبة في الدهون من الطماطم.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 04</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 05 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 05</div>
+    <div class="recipe-name">أوملت الخضروات والدجاج</div>
+    <div class="recipe-desc">بروتين مضاعف — إفطار قوي للرياضيين الجادين</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 عالي البروتين</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">480</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">52g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">15g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">16g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">دجاج مفروم</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">بيض</span><span class="ing-qty">3 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">فلفل ملون</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">بصل</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">فطر</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">10ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">سخّن مقلاة مع نصف كمية الزيت</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اطبخ الدجاج مع البصل والفطر</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الفلفل واطبخ 3 دقائق</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اخفق البيض وصبّه على الخضروات</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">طوِ الأوملت برفق وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> استخدم دجاج عضوي لتقليل الهرمونات الصناعية.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 05</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 06 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 06</div>
+    <div class="recipe-name">شوفان الليل بالبروتين</div>
+    <div class="recipe-desc">تحضير سريع الليلة السابقة — بروتين مستدام طوال الصباح</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 5 دقائق (تحضير)</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">❄️ ليلة واحدة</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">340</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">32g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">38g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">8g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">شوفان كامل</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">حليب خالي الدسم</span><span class="ing-qty">150ml</span></div>
+        <div class="ing-item"><span class="ing-name">بروتين فانيلا</span><span class="ing-qty">25g</span></div>
+        <div class="ing-item"><span class="ing-name">يقطين مبشور</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">10ml</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة</span><span class="ing-qty">رشة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">ضع الشوفان والحليب والبروتين في وعاء</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف اليقطين والعسل والقرفة</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اخلط جيداً</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضعه في الثلاجة طوال الليل</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">تناوله مباشرة من الثلاجة أو دفّئه قليلاً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> يمكن تحضير عدة كوبات في الأسبوع للوقت القيّم.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 06</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 07 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 07</div>
+    <div class="recipe-name">فريتاتا الخضروات</div>
+    <div class="recipe-desc">إفطار إيطالي صحي — بدون دسم وعالي البروتين</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 2-3 حصص</div><div class="meta-tag">🔥 متوسط</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">280</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">28g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">12g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">10g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بيض</span><span class="ing-qty">8 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">سبانخ طازجة</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">جبن شيدر 0%</span><span class="ing-qty">40g</span></div>
+        <div class="ing-item"><span class="ing-name">ملح وفلفل</span><span class="ing-qty">حسب الذوق</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخفق البيض مع الملح والفلفل</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">سخّن مقلاة مع زيت الزيتون</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف السبانخ والطماطم اطبخهما</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">صبّ البيض على الخضروات</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">اطبخ على نار هادئة حتى ينضج</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> أنهِ الطهي في الفرن لضمان نضج متساوٍ.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 07</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 08 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 08</div>
+    <div class="recipe-name">كريب البروتين بالفراولة</div>
+    <div class="recipe-desc">إفطار فاخر وصحي — نكهة حلوة طبيعية مع بروتين عالي</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 12 دقيقة</div><div class="meta-tag">🍽 2-3 كريب</div><div class="meta-tag">🔥 سهل</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">320</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">38g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">22g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">7g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بياض بيض</span><span class="ing-qty">6 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">بروتين فراولة</span><span class="ing-qty">25g</span></div>
+        <div class="ing-item"><span class="ing-name">حليب خالي الدسم</span><span class="ing-qty">30ml</span></div>
+        <div class="ing-item"><span class="ing-name">فراولة طازجة</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">10ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخفق البياض مع البروتين والحليب</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">سخّن مقلاة غير لاصقة</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اسكب كمية من المزيج</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضع الفراولة قبل الطهي الكامل</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">طوِ الكريب وقدّم مع العسل</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> استخدم ملعقة سيليكون لقلب الكريب برفق.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 08</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 09 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#cc5500;border:1px solid #E8A87A33">🌅 إفطار · 09</div>
+    <div class="recipe-name">شيك الموز والفول السوداني</div>
+    <div class="recipe-desc">إفطار سريع للرياضيين المشغولين — 3 دقائق فقط</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 3 دقائق</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">⚡ طاقة فورية</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">460</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">38g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">44g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">14g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">موز مجمد</span><span class="ing-qty">1 حبة كبيرة</span></div>
+        <div class="ing-item"><span class="ing-name">حليب خالي الدسم</span><span class="ing-qty">250ml</span></div>
+        <div class="ing-item"><span class="ing-name">زبدة فول سوداني طبيعية</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">جبن قريش</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">10ml</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة</span><span class="ing-qty">رشة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">ضع جميع المكونات في الخلاط</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخلط 45 ثانية حتى يصبح كريمياً</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اشرب فوراً قبل التمرين أو كإفطار</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> جمّد الموز مسبقاً — يعطي قوام كريمي ودرجة برودة ممتازة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 09</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 10 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8A87A">
+    <div class="recipe-num-badge" style="background:#E8A87A18;color:#cc5500;border:1px solid #E8A87A33">🌅 إفطار · 10</div>
+    <div class="recipe-name">فطيرة الشوفان المالتة</div>
+    <div class="recipe-desc">فطيرة رياضية عالية الكثافة — تملأ وتبني</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">💪 عالي الطاقة</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">510</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">34g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">60g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">12g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">شوفان ناعم</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">بيض</span><span class="ing-qty">3 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">حليب</span><span class="ing-qty">100ml</span></div>
+        <div class="ing-item"><span class="ing-name">موز ناضج</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">بكينج باودر</span><span class="ing-qty">1/2 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">زبدة فول سوداني</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة + فانيلا</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اهرس الموز واخلطه مع البيض والحليب</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف الشوفان + البكينج باودر + البهارات</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اسكب في مقلاة غير لاصقة واطهِ 3 دقائق/جانب</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضع زبدة الفول السوداني فوقها وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> ضاعف الكمية وادّخر الفطائر في الثلاجة — تدوم 3 أيام.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 10</span><span>2025</span></div>
+</div>
+
+<!-- ════════ SECTION 2 DIVIDER ════════ -->
+<div class="page section-divider" style="background:linear-gradient(135deg,#001a0e,#080808)">
+  <div class="sd-num" style="color:#7AE8B8">CUT</div>
+  <div class="sd-content">
+    <span class="sd-icon">🔥</span>
+    <div class="sd-en" style="color:#7AE8B8">SECTION TWO · FAT LOSS MEALS</div>
+    <div class="sd-title">وجبات التنشيف</div>
+    <div class="sd-desc">10 وصفات منخفضة السعرات عالية البروتين — حرق الدهون مع الحفاظ على العضلات</div>
+  </div>
+</div>
+
+<!-- RECIPE 11 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#2DC653;border:1px solid #7AE8B833">🔥 تنشيف · 11</div>
+    <div class="recipe-name">سلطة التونة المشوية</div>
+    <div class="recipe-desc">وجبة تنشيف متكاملة — بروتين عالي وسعرات منخفضة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ منخفض</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">320</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">42g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">18g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">8g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">تونة بالماء معلبة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">خس روماني</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم كرزية</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">خيار</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">بصل أحمر</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">صفّي التونة من الماء</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">قطّع الخضروات</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اخلط الخضروات مع التونة</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">أضف عصير الليمون والزيت</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">تبّل وقدّم فوراً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> لا تستخدم صوص جاهز — الليمون كافٍ للنكهة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 11</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 12 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#2DC653;border:1px solid #7AE8B833">🔥 تنشيف · 12</div>
+    <div class="recipe-name">دجاج مشوي مع الخضروات</div>
+    <div class="recipe-desc">الوجبة الكلاسيكية للتنشيف — بسيطة وفعالة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 30 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">🔥 سهل</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">350</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">48g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">20g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">7g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">بروكلي</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">جزر</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">فلفل</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم</span><span class="ing-qty">2 فص</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">سخّن الفرن 200 درجة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">تبّل الدجاج بالثوم والملح</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">قطّع الخضروات إلى قطع متوسطة</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضعها مع الدجاج على صينية</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">اخبزِ 25 دقيقة حتى ينضج</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> استخدم ورق القصدير لتقليل التنظيف.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 12</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 13 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 13</div>
+    <div class="recipe-name">شوربة العدس بالدجاج</div>
+    <div class="recipe-desc">وجبة دافئة مشبعة — مثالية لأيام الراحة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 30 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ منخفض كارب</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">380</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">38g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">34g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">8g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج مسلوق مفتت</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">عدس أحمر</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">بصل</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم</span><span class="ing-qty">2 فص</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم</span><span class="ing-qty">2 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">كمون + كركم</span><span class="ing-qty">1 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">ملح + فلفل</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قلّي البصل والثوم في رذاذ زيت</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف الطماطم والبهارات واطهِ 5 دقائق</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف العدس مع 500ml ماء</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اطهِ 20 دقيقة حتى يطريَ العدس</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">أضف الدجاج المفتت وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> العدس مصدر ألياف ممتاز — يحافظ على الإحساس بالشبع ساعات.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 13</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 14 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 14</div>
+    <div class="recipe-name">سمك مشوي مع الأرز البني</div>
+    <div class="recipe-desc">بروتين عالي الجودة مع كارب بطيء الامتصاص</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 25 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ أوميغا 3</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">450</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">48g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">42g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">9g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">فيليه سمك (بلطي أو قاروص)</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">أرز بني مطبوخ</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم بودرة + بابريكا</span><span class="ing-qty">1 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+        <div class="ing-item"><span class="ing-name">بقدونس طازج</span><span class="ing-qty">للتزيين</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">تبّل السمك بالبهارات وعصير الليمون</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">سخّن المشواة على نار عالية</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اشوِ السمك 4-5 دقائق من كل جانب</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">قدّم مع الأرز البني والبقدونس</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الأرز البني GI منخفض — يبقي الأنسولين مستقراً خلال التنشيف.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 14</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 15 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 15</div>
+    <div class="recipe-name">سلطة الكينوا بالجمبري</div>
+    <div class="recipe-desc">بروتين كامل + كارب بطيء + أوميغا — ثلاثية التنشيف</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ منخفض دهون</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">390</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">40g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">36g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">9g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">جمبري مقشر</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">كينوا مطبوخة</span><span class="ing-qty">120g</span></div>
+        <div class="ing-item"><span class="ing-name">خيار مقطع</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم كرزية</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">بقدونس طازج</span><span class="ing-qty">حفنة</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون + زيت زيتون</span><span class="ing-qty">1 حبة + 5ml</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم + ملح + فلفل</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">تبّل الجمبري بالثوم والملح واشوِه في مقلاة جافة 3 دقائق</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخلط الكينوا مع الخيار والطماطم والبقدونس</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الجمبري فوق السلطة</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ارشّ الليمون وزيت الزيتون وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الكينوا بروتين كامل نادر في النباتات — تحتوي على الـ 9 أمينو أسيدز الأساسية.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 15</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 16 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 16</div>
+    <div class="recipe-name">دجاج تيريياكي خفيف</div>
+    <div class="recipe-desc">نكهة آسيوية بسعرات منخفضة — بدون سكر مضاف</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ منخفض</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">360</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">46g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">24g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">7g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج شرائح</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">صوص صويا خفيف الصوديوم</span><span class="ing-qty">30ml</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">10ml</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم مفروم</span><span class="ing-qty">2 فص</span></div>
+        <div class="ing-item"><span class="ing-name">زنجبيل مبشور</span><span class="ing-qty">1 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">سمسم للتزيين</span><span class="ing-qty">5g</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط صوص الصويا + العسل + الثوم + الزنجبيل</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">تبّل الدجاج بالصوص ودعه 10 دقائق</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اشوِ الدجاج في مقلاة على نار عالية 4 دقائق كل جانب</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">رش السمسم وقدّم مع خضروات مشوية</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> صوص الصويا خفيف الصوديوم ضروري — النسخة العادية عالية الصوديوم تسبب احتباس الماء خلال التنشيف.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 16</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 17 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 17</div>
+    <div class="recipe-name">بيض مسلوق مع خضروات بخار</div>
+    <div class="recipe-desc">أبسط وجبة تنشيف — صفر دهون مضافة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ أدنى سعرات</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">280</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">26g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">18g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">11g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بيض كامل</span><span class="ing-qty">3 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">بروكلي</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">جزر</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">كوسة</span><span class="ing-qty">1 حبة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">ملح + فلفل + كركم</span><span class="ing-qty">حسب الذوق</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">نصف حبة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اسلق البيض 8 دقائق للحصول على صفار صلب</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">قطّع الخضروات وضعها في البخار 10 دقائق</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">تبّل الخضروات بالكركم والملح والليمون</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">قدّم البيض مع الخضروات</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> البخار يحافظ على الفيتامينات أكثر من الغلي — لا تطهِ الخضروات أكثر من اللازم.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 17</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 18 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 18</div>
+    <div class="recipe-name">شوربة الطماطم بالدجاج</div>
+    <div class="recipe-desc">وجبة دافئة مشبعة — سعرات منخفضة وحجم كبير</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 25 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ مشبع جداً</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">300</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">36g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">22g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">6g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج مفتت مسلوق</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم كبيرة</span><span class="ing-qty">4 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">معجون طماطم</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">بصل + ثوم</span><span class="ing-qty">1 حبة + 2 فص</span></div>
+        <div class="ing-item"><span class="ing-name">كمون + بابريكا + ملح</span><span class="ing-qty">حسب الذوق</span></div>
+        <div class="ing-item"><span class="ing-name">مرق دجاج خفيف</span><span class="ing-qty">400ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قلّي البصل والثوم حتى يذهب لونه</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف الطماطم المقطعة ومعجون الطماطم والبهارات</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف المرق واتركه يغلي 15 دقيقة</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اخلط بالمضرب ثم أضف الدجاج المفتت</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الليكوبين في الطماطم مضاد أكسدة قوي — يتضاعف امتصاصه عند الطهي مقارنة بالنيء.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 18</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 19 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 19</div>
+    <div class="recipe-name">سلطة السبانخ والتونة</div>
+    <div class="recipe-desc">كثافة غذائية عالية بسعرات منخفضة جداً</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 10 دقائق</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ أقل من 300 kcal</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">290</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">38g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">10g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">10g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">تونة بالماء معلبة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">سبانخ طازجة</span><span class="ing-qty">100g</span></div>
+        <div class="ing-item"><span class="ing-name">بيض مسلوق</span><span class="ing-qty">2 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم كرزية</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+        <div class="ing-item"><span class="ing-name">خل بلسمي + ليمون</span><span class="ing-qty">ملعقة + نصف حبة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">ضع السبانخ في طبق كبير</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف التونة المصفاة والبيض المقطع والطماطم</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اخلط الزيت + الخل + الليمون كصوص</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ارشّ الصوص وقدّم فوراً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> السبانخ غنية بالحديد والمغنيسيوم — معدنان أساسيان لأداء العضلات وجودة النوم.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 19</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 20 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AE8B8">
+    <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 20</div>
+    <div class="recipe-name">رول الدجاج بالخس</div>
+    <div class="recipe-desc">وجبة بدون خبز — كارب صفر تقريباً</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">✅ Low Carb</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">310</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">44g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">8g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">10g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج مشوي مفتت</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">أوراق خس رومانية كبيرة</span><span class="ing-qty">6 أوراق</span></div>
+        <div class="ing-item"><span class="ing-name">طماطم مقطعة</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">خيار شرائح</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">زبادي يوناني 0%</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم + ليمون + ملح</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط الزبادي مع الثوم والليمون والملح كصوص</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">ضع ورقة خس مسطحة</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الدجاج + الطماطم + الخيار + الصوص</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">لفّها كرول وقدّم فوراً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> بديل ذكي للساندويش — نفس الإشباع بدون 200+ سعر من الخبز.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 20</span><span>2025</span></div>
+</div>
+
+<!-- ════════ SECTION 3 DIVIDER ════════ -->
+<div class="page section-divider" style="background:linear-gradient(135deg,#00081a,#080808)">
+  <div class="sd-num" style="color:#7AB8E8">BULK</div>
+  <div class="sd-content">
+    <span class="sd-icon">💪</span>
+    <div class="sd-en" style="color:#7AB8E8">SECTION THREE · MUSCLE GAIN</div>
+    <div class="sd-title">وجبات التضخيم</div>
+    <div class="sd-desc">10 وصفات للبناء العضلي والاسترداد</div>
+  </div>
+</div>
+
+<!-- RECIPE 21 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#7AB8E8;border:1px solid #7AB8E833">💪 تضخيم · 21</div>
+    <div class="recipe-name">رز بالدجاج وصوص الفول السوداني</div>
+    <div class="recipe-desc">وجبة تضخيم كلاسيكية — توازن ماكرو مثالي</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 25 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 عالي كالوري</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">680</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">52g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">72g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">18g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">رز أبيض (جاف)</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">صدر دجاج</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">زبدة فول سوداني</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">صوص صويا</span><span class="ing-qty">10ml</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم بودر</span><span class="ing-qty">ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">بصل أخضر</span><span class="ing-qty">للتزيين</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اسلق الرز 20 دقيقة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اشوِ الدجاج مع الثوم</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">قطّع الدجاج لشرائح</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اخلط زبدة الفول والصوص بماء دافئ</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">ضع الرز والدجاج والصوص</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> تناول بعد التمرين مباشرة للاستفادة القصوى.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 21</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 22 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 22</div>
+    <div class="recipe-name">مكرونة بالدجاج والكريمة</div>
+    <div class="recipe-desc">وجبة تضخيم كاملة — كارب + بروتين + دهون صحية</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 25 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 كثافة كالورية</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">680</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">52g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">72g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">16g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">مكرونة مطبوخة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">صدر دجاج مكعبات</span><span class="ing-qty">180g</span></div>
+        <div class="ing-item"><span class="ing-name">كريمة طهي خفيفة 15%</span><span class="ing-qty">100ml</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم</span><span class="ing-qty">3 فصوص</span></div>
+        <div class="ing-item"><span class="ing-name">جبن بارميزان مبشور</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">بابريكا + ملح + فلفل</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اطهِ المكرونة في ماء مملح</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">قلّي الدجاج مع الثوم حتى يذهب لونه</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الكريمة والبهارات واطهِ 5 دقائق</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اخلط المكرونة مع الصوص</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">رش البارميزان وقدّم ساخناً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> استبدل الكريمة بلبن رائب لتقليل الدهون دون خسارة الكثافة الكالورية.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 22</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 23 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 23</div>
+    <div class="recipe-name">بطاطا حلوة بالتونة والأفوكادو</div>
+    <div class="recipe-desc">مزيج مثالي من الكارب + بروتين + دهون غير مشبعة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 30 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">🥑 دهون صحية</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">590</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">44g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">58g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">18g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بطاطا حلوة كبيرة</span><span class="ing-qty">250g</span></div>
+        <div class="ing-item"><span class="ing-name">تونة بالماء معلبة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">أفوكادو</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">بصل أحمر مفروم</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">ملح + فلفل + كزبرة</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اطهِ البطاطا في الفرن 25 دقيقة 200°</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اهرس الأفوكادو مع الليمون والملح</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">افتح البطاطا واحشها بالأفوكادو</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضع التونة والبصل فوقها وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> البطاطا الحلوة غنية بالبوتاسيوم — تساعد على تعافي العضلات.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 23</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 24 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 24</div>
+    <div class="recipe-name">برجر الدجاج الرياضي</div>
+    <div class="recipe-desc">بروتين عالٍ + كارب + دهون صحية — وجبة تضخيم مكتملة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 High Calorie</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">620</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">52g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">54g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">18g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">دجاج مفروم</span><span class="ing-qty">220g</span></div>
+        <div class="ing-item"><span class="ing-name">خبز برجر كامل الحبوب</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">بيضة</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم بودرة + بابريكا + ملح</span><span class="ing-qty">1 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">أفوكادو</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">خس + طماطم + خيار</span><span class="ing-qty">للتقديم</span></div>
+        <div class="ing-item"><span class="ing-name">زبادي يوناني 0%</span><span class="ing-qty">30g (صوص)</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط الدجاج المفروم مع البيضة والبهارات</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">شكّل كوتليت واشوِه 5 دقائق كل جانب</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">احمِص الخبز قليلاً</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ارتّب الكوتليت + الأفوكادو + الخضروات + الزبادي</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الأفوكادو يضيف دهون أحادية غير مشبعة — تدعم هرمون التستوستيرون خلال التضخيم.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 24</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 25 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 25</div>
+    <div class="recipe-name">طاجين اللحم بالخضروات</div>
+    <div class="recipe-desc">وجبة تضخيم جزائرية أصيلة — كثيفة وغنية بالماكرو</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 50 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">🇩🇿 محلية</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">650</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">48g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">60g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">20g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">لحم غنم أو بقر قطع صغيرة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">بطاطا مكعبات</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">جزر + كوسة + طماطم</span><span class="ing-qty">150g مجموع</span></div>
+        <div class="ing-item"><span class="ing-name">بصل + ثوم</span><span class="ing-qty">1 حبة + 3 فصوص</span></div>
+        <div class="ing-item"><span class="ing-name">راس الحانوت + كمون + ملح</span><span class="ing-qty">2 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">10ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قلّي البصل والثوم بالزيت حتى يذهب لونه</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف اللحم والبهارات واحمرّه من كل جانب</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الخضروات مع كوب ماء</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">غطِّ واطهِ على نار هادئة 40 دقيقة</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> اللحم الحمر غني بالزنك والحديد والكرياتين الطبيعي — لا تقصيه نهائياً في التضخيم.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 25</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 26 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 26</div>
+    <div class="recipe-name">أرز بالكاري والدجاج</div>
+    <div class="recipe-desc">نكهة قوية + ماكرو ضخيم — وجبة يومية لا تملّ منها</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 25 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 Bulk Classic</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">640</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">50g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">70g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">14g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج مكعبات</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">أرز أبيض مطبوخ</span><span class="ing-qty">220g</span></div>
+        <div class="ing-item"><span class="ing-name">حليب جوز الهند خفيف</span><span class="ing-qty">100ml</span></div>
+        <div class="ing-item"><span class="ing-name">مسحوق كاري</span><span class="ing-qty">2 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">بصل + ثوم + زنجبيل</span><span class="ing-qty">1 + 2 فص + 1 ملعقة</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون + ملح</span><span class="ing-qty">5ml + حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قلّي البصل والثوم والزنجبيل بالزيت</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف الدجاج مع مسحوق الكاري واطهِ 5 دقائق</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف حليب جوز الهند واتركه يغلي 8 دقائق</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">قدّم فوق الأرز</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الكركم في الكاري مضاد التهاب قوي — يساعد على التعافي العضلي بين الجلسات.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 26</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 27 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 27</div>
+    <div class="recipe-name">باستا البروتين بالبيض</div>
+    <div class="recipe-desc">Carbonara رياضي — كارب + بروتين مزدوج بدون كريمة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 High Protein Carb</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">660</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">54g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">68g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">16g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">مكرونة مطبوخة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">بيض كامل</span><span class="ing-qty">3 حبات</span></div>
+        <div class="ing-item"><span class="ing-name">صدر دجاج مكعبات مشوي</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">جبن بارميزان مبشور</span><span class="ing-qty">25g</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم</span><span class="ing-qty">2 فص</span></div>
+        <div class="ing-item"><span class="ing-name">فلفل أسود + ملح</span><span class="ing-qty">بسخاء</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اطهِ المكرونة واحتفظ بكوب من ماء الطهي</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخفق البيض مع البارميزان والفلفل</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">قلّي الثوم والدجاج في مقلاة على نار متوسطة</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">أضف المكرونة الساخنة وأطفئ النار</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">أضف خليط البيض وحرّك بسرعة مع ماء الطهي</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> أطفئ النار قبل إضافة البيض — الحرارة الزائدة تحوّله بيضاً مسلوقاً لا صوصاً.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 27</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 28 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 28</div>
+    <div class="recipe-name">لحم مفروم مع الكينوا</div>
+    <div class="recipe-desc">بروتين حيواني + نباتي كامل — تضخيم ذكي</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 25 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 Double Protein</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">610</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">52g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">52g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">20g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">لحم مفروم 10% دهون</span><span class="ing-qty">180g</span></div>
+        <div class="ing-item"><span class="ing-name">كينوا مطبوخة</span><span class="ing-qty">150g</span></div>
+        <div class="ing-item"><span class="ing-name">بصل + ثوم + طماطم</span><span class="ing-qty">1 + 2 فص + 1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">فلفل أحمر مقطع</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">كمون + بابريكا + ملح</span><span class="ing-qty">2 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قلّي البصل والثوم بالزيت حتى يذهب لونه</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف اللحم المفروم مع البهارات وفتّته أثناء الطهي</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الطماطم والفلفل واطهِ 10 دقائق</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">قدّم فوق الكينوا</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> اختر لحم 10% دهون وليس أقل — الدهون الحيوانية المعتدلة ضرورية لإنتاج الهرمونات.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 28</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 29 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 29</div>
+    <div class="recipe-name">صدر دجاج محشو بالجبن</div>
+    <div class="recipe-desc">وجبة مطعم في المنزل — بروتين مرتفع ونكهة استثنائية</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 30 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">⭐ وجبة مميزة</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">580</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">58g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">20g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">28g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج كبير</span><span class="ing-qty">250g</span></div>
+        <div class="ing-item"><span class="ing-name">جبن موزاريلا</span><span class="ing-qty">40g</span></div>
+        <div class="ing-item"><span class="ing-name">سبانخ طازجة</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم مفروم</span><span class="ing-qty">2 فص</span></div>
+        <div class="ing-item"><span class="ing-name">بابريكا + أوريغانو + ملح</span><span class="ing-qty">حسب الذوق</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">افتح الصدر بالسكين لخلق جيب داخلي</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">احشوه بالجبن والسبانخ والثوم</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أغلقه بعيدان خشبية وتبّل من الخارج</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اشوِه في الفرن 200° لمدة 22 دقيقة</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> استخدم ميزان حرارة اللحم — الدجاج جاهز عند 74°. يمنع الجفاف ويضمن السلامة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 29</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 30 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #7AB8E8">
+    <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 30</div>
+    <div class="recipe-name">بيريتو البروتين</div>
+    <div class="recipe-desc">وجبة تضخيم كاملة في يدك — كارب + بروتين + دهون</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">🌯 Meal Prep</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">700</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">55g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">72g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">18g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">تورتيلا كبيرة كاملة الحبوب</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">أرز مطبوخ</span><span class="ing-qty">120g</span></div>
+        <div class="ing-item"><span class="ing-name">دجاج مشوي مفتت</span><span class="ing-qty">180g</span></div>
+        <div class="ing-item"><span class="ing-name">فاصوليا سوداء معلبة</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">جبن مبشور</span><span class="ing-qty">25g</span></div>
+        <div class="ing-item"><span class="ing-name">زبادي يوناني 0%</span><span class="ing-qty">50g (بديل الكريمة)</span></div>
+        <div class="ing-item"><span class="ing-name">أفوكادو + ليمون + ملح</span><span class="ing-qty">نصف حبة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">سخّن التورتيلا 30 ثانية في المقلاة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">ضع الأرز في المنتصف أولاً</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف الدجاج + الفاصوليا + الجبن + الأفوكادو</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضع الزبادي كصوص ولفّ البيريتو بإحكام</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">احمِصه في المقلاة دقيقة كل جانب</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> مثالي لـ Meal Prep — حضّر 5 بيريتوز، لفّها بورق الفويل وادّخرها في البراد طوال الأسبوع.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 30</span><span>2025</span></div>
+</div>
+
+<!-- ════════ SECTION 4 DIVIDER ════════ -->
+<div class="page section-divider" style="background:linear-gradient(135deg,#0f001a,#080808)">
+  <div class="sd-num" style="color:#C97AE8">SNACK</div>
+  <div class="sd-content">
+    <span class="sd-icon">🥜</span>
+    <div class="sd-en" style="color:#C97AE8">SECTION FOUR · HEALTHY SNACKS</div>
+    <div class="sd-title">سناك صحي</div>
+    <div class="sd-desc">10 وصفات سناك لسد الجوع بين الوجبات</div>
+  </div>
+</div>
+
+<!-- RECIPE 31 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#C97AE8;border:1px solid #C97AE833">🥜 سناك · 31</div>
+    <div class="recipe-name">كرات الطاقة بالشوفان</div>
+    <div class="recipe-desc">سناك طبيعي بدون طهي — مثالي قبل التمرين</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 15 دقيقة</div><div class="meta-tag">🍽 8-10 كرات</div><div class="meta-tag">❄️ ليلة واحدة</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">180</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">8g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">22g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">7g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">شوفان كامل</span><span class="ing-qty">60g</span></div>
+        <div class="ing-item"><span class="ing-name">زبدة فول سوداني</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل طبيعي</span><span class="ing-qty">15ml</span></div>
+        <div class="ing-item"><span class="ing-name">شوكولاتة 85%</span><span class="ing-qty">15g</span></div>
+        <div class="ing-item"><span class="ing-name">بذور الشيا</span><span class="ing-qty">10g</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط الشوفان والزبدة والعسل</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">قطّع الشوكولاتة وأضفها</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">أضف بذور الشيا</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">برّد 15 دقيقة</div></div>
+        <div class="step-item"><div class="step-n">5</div><div class="step-text">شكّل كرات وادّخرها</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> حضّر كمية كبيرة أسبوعياً للالتزام الأفضل.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 31</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 32 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 32</div>
+    <div class="recipe-name">كريب البروتين بالموز</div>
+    <div class="recipe-desc">سناك لذيذ بين الوجبات — بروتين وطاقة سريعة</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 10 دقائق</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">✅ خفيف</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">310</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">28g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">32g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">6g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بيض</span><span class="ing-qty">2 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">بروتين واي فانيلا</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">دقيق شوفان</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">موز ناضج</span><span class="ing-qty">1 حبة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">حليب</span><span class="ing-qty">50ml</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة</span><span class="ing-qty">رشة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط البيض + البروتين + الشوفان + الحليب</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">سكب العجينة في مقلاة على نار متوسطة</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اطهِ دقيقتين من كل جانب</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">ضع شرائح الموز + القرفة وقدّم</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> يمكن تحضيره صباحاً وأخذه معك — لا يحتاج تسخيناً.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 32</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 33 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 33</div>
+    <div class="recipe-name">شيك البروتين الطبيعي</div>
+    <div class="recipe-desc">بديل الواي الطبيعي 100% — بدون مكملات</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 5 دقائق</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">🌿 طبيعي</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">350</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">32g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">36g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">7g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">جبن قريش (fromage blanc)</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">حليب خالي الدسم</span><span class="ing-qty">200ml</span></div>
+        <div class="ing-item"><span class="ing-name">موز</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">1 ملعقة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">فول سوداني مطحون</span><span class="ing-qty">15g</span></div>
+        <div class="ing-item"><span class="ing-name">مكعبات ثلج</span><span class="ing-qty">4 حبات</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">ضع كل المكونات في الخلاط</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخلط دقيقة كاملة حتى يصبح ناعماً</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اشرب فوراً أو ادّخر في برادة</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الجبن قريش يحتوي على كازيين — بروتين بطيء الامتصاص مثالي قبل النوم أيضاً.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 33</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 34 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 34</div>
+    <div class="recipe-name">حمص محلي مع الخضروات</div>
+    <div class="recipe-desc">سناك غني بالألياف والبروتين النباتي — لا يرفع الأنسولين</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 10 دقائق</div><div class="meta-tag">🍽 حصتان</div><div class="meta-tag">🌿 نباتي</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">280</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">14g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">28g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">12g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">حمص مسلوق أو معلب</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">طحينة</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم</span><span class="ing-qty">1 فص</span></div>
+        <div class="ing-item"><span class="ing-name">زيت زيتون</span><span class="ing-qty">5ml</span></div>
+        <div class="ing-item"><span class="ing-name">خيار + جزر + فلفل</span><span class="ing-qty">للغمس</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط الحمص + الطحينة + الليمون + الثوم في الخلاط</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف ملعقتين ماء حتى يصبح ناعماً</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">قدّم مع الخضروات مقطعة للغمس</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> احضر كمية أسبوعية وادّخرها في البراد — تدوم 5 أيام.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 34</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 35 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 35</div>
+    <div class="recipe-name">تفاح بزبدة الفول السوداني</div>
+    <div class="recipe-desc">أبسط سناك رياضي — كارب + دهون + ألياف</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 2 دقيقة</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">⚡ فوري</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">240</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">8g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">28g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">12g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">تفاحة متوسطة</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">زبدة فول سوداني طبيعية</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة</span><span class="ing-qty">رشة اختيارية</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قطّع التفاحة شرائح رفيعة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">ضع زبدة الفول السوداني في صحن صغير</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اغمس الشرائح وتناولها فوراً</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> اختر زبدة فول سوداني طبيعية (مكوّن واحد فقط: الفول السوداني) — تجنّب الإضافات والسكر.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 35</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 36 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 36</div>
+    <div class="recipe-name">مكسرات وفواكه مجففة</div>
+    <div class="recipe-desc">Trail mix رياضي — طاقة مضغوطة للتنقل</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 1 دقيقة</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">🎒 للتنقل</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">320</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">10g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">30g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">18g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">لوز خام</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">جوز</span><span class="ing-qty">15g</span></div>
+        <div class="ing-item"><span class="ing-name">كاجو</span><span class="ing-qty">15g</span></div>
+        <div class="ing-item"><span class="ing-name">زبيب</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">تمر مجفف مقطع</span><span class="ing-qty">2 حبة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط جميع المكونات في وعاء صغير</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">قسّمها في أكياس صغيرة للأسبوع</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">تناول حصة واحدة بين الوجبات</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الكميات مهمة جداً هنا — المكسرات كثيفة كالورياً، لا تتجاوز 50g إجمالاً في الوجبة الواحدة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 36</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 37 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 37</div>
+    <div class="recipe-name">جبن قريش بالخيار</div>
+    <div class="recipe-desc">سناك بروتيني خفيف جداً — مثالي مساءً</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 3 دقائق</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">🌙 ليلي</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">180</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">22g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">8g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">4g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">جبن قريش (fromage blanc 0%)</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">خيار طازج</span><span class="ing-qty">1 حبة كبيرة</span></div>
+        <div class="ing-item"><span class="ing-name">نعناع طازج</span><span class="ing-qty">بضع أوراق</span></div>
+        <div class="ing-item"><span class="ing-name">ملح + فلفل أبيض</span><span class="ing-qty">رشة</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">عصير نصف حبة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">قطّع الخيار دوائر رفيعة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخلط الجبن مع الليمون والملح والنعناع</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">قدّم الجبن مع الخيار للغمس</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الجبن قريش يحتوي على كازيين — بروتين بطيء الامتصاص مثالي قبل النوم لبناء العضل أثناء الراحة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 37</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 38 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 38</div>
+    <div class="recipe-name">بار الشوفان محلي الصنع</div>
+    <div class="recipe-desc">بديل البارات الجاهزة — أرخص وأنظف مكونات</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 8 بارات</div><div class="meta-tag">📦 للتخزين</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">220</div><div class="macro-lbl">KCAL/بار</div></div>
+    <div class="macro-cell prot"><div class="macro-val">9g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">30g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">8g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات (8 بارات)</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">شوفان</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">60ml</span></div>
+        <div class="ing-item"><span class="ing-name">زبدة فول سوداني</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">بذور شيا</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">زبيب أو تمر مفروم</span><span class="ing-qty">50g</span></div>
+        <div class="ing-item"><span class="ing-name">قرفة</span><span class="ing-qty">1 ملعقة صغيرة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">سخّن العسل وزبدة الفول السوداني معاً</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف بقية المكونات واخلط جيداً</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">افرد في صينية مبطنة بورق فرن</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">برّد في الثلاجة ساعة ثم قطّع بارات</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> تُخزَّن في الثلاجة لمدة أسبوعين — ضعها في كيس مع اسمك وتاريخ الصنع للالتزام.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 38</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 39 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 39</div>
+    <div class="recipe-name">موس الشوكولاتة الرياضي</div>
+    <div class="recipe-desc">سناك حلو مشروع — بروتين عالٍ بدون ذنب</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 5 دقائق</div><div class="meta-tag">🍽 حصة واحدة</div><div class="meta-tag">🍫 حلوى صحية</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">290</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">30g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">22g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">8g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">جبن قريش 0%</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">كاكاو خام بدون سكر</span><span class="ing-qty">15g</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">15ml</span></div>
+        <div class="ing-item"><span class="ing-name">بروتين شوكولاتة</span><span class="ing-qty">20g</span></div>
+        <div class="ing-item"><span class="ing-name">حليب</span><span class="ing-qty">30ml</span></div>
+        <div class="ing-item"><span class="ing-name">فانيلا</span><span class="ing-qty">رشة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اخلط الجبن + الكاكاو + البروتين + الحليب</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أضف العسل والفانيلا واخلط جيداً</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">برّد 15 دقيقة للحصول على قوام موس</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> استبدل البروتين بكاكاو إضافي إن لم يكن متاحاً — ستفقد 10g بروتين فقط.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 39</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 40 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #C97AE8">
+    <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 40</div>
+    <div class="recipe-name">عصير الطاقة الطبيعي</div>
+    <div class="recipe-desc">بديل مشروبات الطاقة الكيميائية — 100% طبيعي</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 5 دقائق</div><div class="meta-tag">🍽 كأس واحدة</div><div class="meta-tag">⚡ قبل التمرين</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">150</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">4g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">34g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">1g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">برتقالة</span><span class="ing-qty">2 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">موز</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">زنجبيل طازج</span><span class="ing-qty">قطعة صغيرة</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">نصف حبة</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">10ml</span></div>
+        <div class="ing-item"><span class="ing-name">ماء</span><span class="ing-qty">200ml</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اعصر البرتقال والليمون</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">ضع كل شيء في الخلاط مع الماء</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اخلط 30 ثانية وصفّي إن أردت</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">اشرب قبل 30-45 دقيقة من التمرين</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الزنجبيل يقلل الالتهابات العضلية ويحسن الأداء — لا تحذفه من الوصفة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 40</span><span>2025</span></div>
+</div>
+
+<!-- ════════ SECTION 5 DIVIDER ════════ -->
+<div class="page section-divider" style="background:linear-gradient(135deg,#1a1a00,#080808)">
+  <div class="sd-num" style="color:#E8E87A">POST-WORKOUT</div>
+  <div class="sd-content">
+    <span class="sd-icon">🍝</span>
+    <div class="sd-en" style="color:#E8E87A">SECTION FIVE · POST-WORKOUT MEALS</div>
+    <div class="sd-title">وجبات ما بعد التمرين</div>
+    <div class="sd-desc">10 وصفات للاسترداد السريع</div>
+  </div>
+</div>
+
+<!-- RECIPE 41 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8E87A">
+    <div class="recipe-num-badge" style="background:#E8E87A18;color:#a0a000;border:1px solid #E8E87A33">🍝 بعد التمرين · 41</div>
+    <div class="recipe-name">شيك الاسترداد السريع</div>
+    <div class="recipe-desc">أسرع وجبة استرداد — 30 دقيقة امتصاص</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 3 دقائق</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">⚡ امتصاص سريع</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">420</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">45g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">48g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">6g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بروتين واي</span><span class="ing-qty">40g</span></div>
+        <div class="ing-item"><span class="ing-name">موز مجمد</span><span class="ing-qty">1 حبة</span></div>
+        <div class="ing-item"><span class="ing-name">حليب خالي الدسم</span><span class="ing-qty">250ml</span></div>
+        <div class="ing-item"><span class="ing-name">عسل</span><span class="ing-qty">10ml</span></div>
+        <div class="ing-item"><span class="ing-name">كرياتين</span><span class="ing-qty">5g</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">ضع جميع المكونات في الخلاط</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخلط 30 ثانية</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">اشرب خلال 30 دقيقة من انتهاء التمرين</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> البروتين الواي هو الأسرع امتصاصاً — 30-60 دقيقة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 41</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 42 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8E87A">
+    <div class="recipe-num-badge" style="background:#E8E87A18;color:#888800;border:1px solid #E8E87A33">🍝 بعد التمرين · 42</div>
+    <div class="recipe-name">رز أبيض بالدجاج المسلوق</div>
+    <div class="recipe-desc">كلاسيك ما بعد التمرين — كارب + بروتين سريع</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 20 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">⚡ استرداد سريع</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">520</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">50g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">58g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">6g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">صدر دجاج</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">رز أبيض مطبوخ</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">مرق دجاج خفيف</span><span class="ing-qty">500ml</span></div>
+        <div class="ing-item"><span class="ing-name">ثوم + ملح + كمون</span><span class="ing-qty">حسب الذوق</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون</span><span class="ing-qty">نصف حبة</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اسلق الدجاج في المرق مع البهارات 15 دقيقة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">أخرج الدجاج وفتّته</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">قدّم الدجاج فوق الرز مع عصير الليمون</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الرز الأبيض GI مرتفع — هذا ايجابي بعد التمرين لرفع الأنسولين ونقل الأمينو أسيدز للعضلة.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 42</span><span>2025</span></div>
+</div>
+
+<!-- RECIPE 43 -->
+<div class="page recipe-page">
+  <div class="recipe-header" style="border-right:4px solid #E8E87A">
+    <div class="recipe-num-badge" style="background:#E8E87A18;color:#888800;border:1px solid #E8E87A33">🍝 بعد التمرين · 43</div>
+    <div class="recipe-name">بطاطا مشوية بالتونة</div>
+    <div class="recipe-desc">وجبة استرداد مشبعة — كارب معقد وبروتين عالٍ</div>
+    <div class="recipe-meta"><div class="meta-tag">⏱ 35 دقيقة</div><div class="meta-tag">🍽 وجبة واحدة</div><div class="meta-tag">💪 استرداد عميق</div></div>
+  </div>
+  <div class="macro-bar">
+    <div class="macro-cell kcal"><div class="macro-val">490</div><div class="macro-lbl">KCAL</div></div>
+    <div class="macro-cell prot"><div class="macro-val">46g</div><div class="macro-lbl">بروتين</div></div>
+    <div class="macro-cell carb"><div class="macro-val">52g</div><div class="macro-lbl">كارب</div></div>
+    <div class="macro-cell fat"><div class="macro-val">8g</div><div class="macro-lbl">دهون</div></div>
+  </div>
+  <div class="recipe-body">
+    <div>
+      <div class="recipe-section-title">المكونات</div>
+      <div class="ing-list">
+        <div class="ing-item"><span class="ing-name">بطاطا عادية كبيرة</span><span class="ing-qty">250g</span></div>
+        <div class="ing-item"><span class="ing-name">تونة بالماء معلبة</span><span class="ing-qty">200g</span></div>
+        <div class="ing-item"><span class="ing-name">زبادي يوناني 0%</span><span class="ing-qty">80g</span></div>
+        <div class="ing-item"><span class="ing-name">بصل أخضر مفروم</span><span class="ing-qty">30g</span></div>
+        <div class="ing-item"><span class="ing-name">ليمون + ملح + فلفل</span><span class="ing-qty">حسب الذوق</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="recipe-section-title">طريقة التحضير</div>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-n">1</div><div class="step-text">اشوِ البطاطا في الفرن 200° لمدة 30 دقيقة</div></div>
+        <div class="step-item"><div class="step-n">2</div><div class="step-text">اخلط التونة مع الزبادي والبصل والليمون</div></div>
+        <div class="step-item"><div class="step-n">3</div><div class="step-text">افتح البطاطا واحشها بخليط التونة</div></div>
+        <div class="step-item"><div class="step-n">4</div><div class="step-text">قدّم ساخناً مباشرة</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="recipe-tip"><strong>💡 نصيحة:</strong> الزبادي بديل ممتاز للمايونيز — يضيف بروتين إضافي بدون دهون.</div>
+  <div class="page-footer"><span>COACH ANIS</span><span>وصفة 43</span><span>2025</span></div>
+</div>
+
+<!-- ════════ BACK COVER ════════ -->
+<div class="page back-cover">
+  <div class="cover-bg"></div>
+  <div class="cover-grid"></div>
+  <div class="back-cover-content">
+    <div style="font-size:28px;font-weight:900;color:white;margin-bottom:16px;line-height:1.4">هل أعجبك الكتاب؟</div>
+    <div style="width:60px;height:2px;background:linear-gradient(90deg,transparent,#C9A84C,transparent);margin:0 auto 40px;"></div>
+    <div style="font-size:56px;margin-bottom:24px">📸</div>
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:4px;color:#C9A84C;margin-bottom:8px">@coach__anis</div>
+    <div style="font-size:13px;color:rgba(255,255,255,.4);letter-spacing:2px">INSTAGRAM</div>
+  </div>
+</div>
+
+</div><!-- end pages -->
+
+<script>
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.no-print').forEach(el => el.style.display = 'none');
+});
+window.addEventListener('afterprint', () => {
+  document.querySelectorAll('.no-print').forEach(el => el.style.display = '');
+});
+</script>
+
+<script>
+(function(){
+  // Particles
+  var pc = document.getElementById('gateParticles');
+  for(var i=0;i<25;i++){
+    var p=document.createElement('div');p.className='gate-particle';
+    p.style.cssText='left:'+Math.random()*100+'%;width:'+(Math.random()*3+1)+'px;height:'+(Math.random()*3+1)+'px;animation-duration:'+(Math.random()*12+8)+'s;animation-delay:'+(Math.random()*10)+'s;';
+    pc.appendChild(p);
+  }
+  // Eye
+  document.getElementById('gateEye').onclick=function(){
+    var inp=document.getElementById('gateInput');
+    var vis=inp.type==='text';
+    inp.type=vis?'password':'text';
+    this.textContent=vis?'👁':'🙈';
+  };
+  // Enter key
+  document.getElementById('gateInput').addEventListener('keydown',function(e){
+    if(e.key==='Enter')gateCheck();
+    document.getElementById('gateErr').textContent='';
+    this.classList.remove('gerror');
+  });
+})();
+
+function gateCheck(){
+  var val=document.getElementById('gateInput').value.trim();
+  var err=document.getElementById('gateErr');
+  var btn=document.getElementById('gateBtn');
+  var inp=document.getElementById('gateInput');
+  if(!val){err.innerHTML='⚠️ من فضلك أدخل الكود';inp.classList.add('gerror');setTimeout(function(){inp.classList.remove('gerror');},600);return;}
+  btn.classList.add('gloading');btn.textContent='...جارٍ التحقق';
+  setTimeout(function(){
+    if(val==='anis2006'){
+      inp.classList.add('gsuccess');
+      var s=document.getElementById('gateSuccess');s.classList.add('show');
+      setTimeout(function(){document.getElementById('gateProgFill').style.width='100%';},100);
+      setTimeout(function(){
+        var ov=document.getElementById('gate-overlay');
+        ov.classList.add('hide');
+        setTimeout(function(){ov.style.display='none';},700);
+      },1700);
+    } else {
+      btn.classList.remove('gloading');btn.textContent='دخول ←';
+      inp.classList.add('gerror');inp.value='';
+      err.innerHTML='✗ الكود غير صحيح، حاول مجدداً';
+      setTimeout(function(){inp.classList.remove('gerror');err.textContent='';},2500);
+      inp.focus();
+    }
+  },700);
+}
+</script>
+
+</body>
+</html>
