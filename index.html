@@ -4,22 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>كتاب الوصفات | Coach Anis</title>
-
-<!-- ── Open Graph / Social Media Preview ── -->
-<meta property="og:type"        content="website" />
-<meta property="og:title"       content="أقوى كتاب تغذية | 50 وصفة حصرية - Coach Anis" />
-<meta property="og:description" content="50 وصفة غذائية حصرية للمشتركين فقط! أطلق العنان لطاقتك مع Coach Anis." />
-<meta property="og:image"       content="preview.png" />
-<meta property="og:image:width" content="1400" />
-<meta property="og:image:height" content="734" />
-<meta property="og:image:alt"   content="كتاب تغذية Coach Anis - 50 وصفة حصرية" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card"        content="summary_large_image" />
-<meta name="twitter:title"       content="أقوى كتاب تغذية | 50 وصفة حصرية - Coach Anis" />
-<meta name="twitter:description" content="50 وصفة غذائية حصرية للمشتركين فقط! أطلق العنان لطاقتك مع Coach Anis." />
-<meta name="twitter:image"       content="preview.png" />
-
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 /* ── PRINT SETUP ── */
@@ -43,36 +27,111 @@ body {
   color: #1a1a1a;
 }
 
-/* ── PRINT BUTTON ── */
+
+/* ── ENHANCED TOOLBAR ── */
 .print-bar {
   position: fixed; top: 0; left: 0; right: 0;
   background: #0F0F0F;
   border-bottom: 1px solid rgba(201,168,76,0.3);
-  padding: 12px 24px;
-  display: flex; align-items: center; gap: 16px;
+  padding: 8px 16px;
+  display: flex; align-items: center; gap: 10px;
   z-index: 1000;
   flex-wrap: wrap;
+  min-height: 52px;
 }
 
-.print-bar span {
-  color: #666; font-size: 13px;
+.tb-search-wrap {
+  position: relative;
+  display: flex; align-items: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1; min-width: 160px; max-width: 280px;
+}
+.tb-search-icon { padding: 0 8px; font-size: 13px; color: #666; pointer-events:none; }
+.tb-search {
+  background: transparent; border: none; outline: none;
+  color: #eee; font-family: 'Cairo', sans-serif;
+  font-size: 13px; padding: 7px 0; flex: 1;
+  direction: rtl;
+}
+.tb-search::placeholder { color: #444; }
+.tb-clear {
+  background: none; border: none; color: #555;
+  cursor: pointer; padding: 0 8px; font-size: 14px;
+  display: none;
+  transition: color .2s;
+}
+.tb-clear:hover { color: #C9A84C; }
+.tb-clear.show { display: block; }
+
+.tb-filters {
+  display: flex; gap: 5px; flex-wrap: wrap;
+}
+.tb-filter {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 5px 11px;
+  font-family: 'Cairo', sans-serif; font-size: 11px;
+  color: #666; cursor: pointer; transition: all .2s;
+  white-space: nowrap;
+}
+.tb-filter:hover { border-color: #C9A84C; color: #ddd; }
+.tb-filter.on {
+  background: rgba(201,168,76,0.12);
+  border-color: #C9A84C; color: #C9A84C;
+}
+
+/* ── READING PROGRESS BAR ── */
+.read-progress {
+  position: fixed; top: 52px; left: 0; right: 0;
+  height: 3px; background: rgba(255,255,255,0.05);
+  z-index: 999;
+}
+.read-prog-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #C9A84C, #E8C97A);
+  width: 0%;
+  transition: width .15s ease;
+  box-shadow: 0 0 8px rgba(201,168,76,0.5);
+}
+.read-prog-label {
+  position: absolute; left: 12px; top: 5px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 10px; letter-spacing: 1px;
+  color: #C9A84C; opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+.read-progress:hover .read-prog-label { opacity: 1; }
+
+/* ── SEARCH EMPTY STATE ── */
+.search-empty {
+  position: fixed; top: 55px; left: 0; right: 0; bottom: 0;
+  background: #0d0d0d;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; z-index: 50;
+  font-size: 16px; color: #555;
   font-family: 'Cairo', sans-serif;
 }
+.search-empty div:first-child { font-size: 48px; }
 
-.btn-print {
-  background: linear-gradient(135deg, #C9A84C, #E8C97A);
-  color: #000; border: none;
-  border-radius: 8px; padding: 10px 24px;
-  font-family: 'Cairo', sans-serif;
-  font-size: 14px; font-weight: 900;
-  cursor: pointer; transition: all .2s;
+/* ── PAGES CONTAINER (adjusted for taller toolbar) ── */
+.pages { padding-top: 68px !important; }
+
+@media (max-width: 768px) {
+  .tb-search-wrap { min-width: 120px; }
+  .tb-filter { font-size: 10px; padding: 4px 8px; }
+  .read-progress { top: auto; bottom: 0; }
+  .read-prog-label { display: none; }
 }
 
-.btn-print:hover { box-shadow: 0 4px 16px rgba(201,168,76,.4); transform: translateY(-1px); }
 
 /* ── PAGES CONTAINER ── */
 .pages {
-  padding: 80px 20px 40px;
+  padding: 68px 20px 40px;
   display: flex; flex-direction: column;
   align-items: center; gap: 24px;
 }
@@ -639,6 +698,17 @@ body {
 .gate-prog{width:200px;height:3px;background:rgba(201,168,76,.2);border-radius:10px;overflow:hidden;animation:gfadeUp .5s .3s both;}
 .gate-prog-fill{height:100%;background:linear-gradient(90deg,#C9A84C,#E8C97A);border-radius:inherit;width:0%;transition:width 1.5s ease;}
 @media(max-width:480px){.gate-card{padding:40px 24px;margin:16px;}.gate-title{font-size:22px;}}
+
+.btn-print {
+  background: linear-gradient(135deg, #C9A84C, #E8C97A);
+  color: #000; border: none;
+  border-radius: 8px; padding: 8px 16px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px; font-weight: 900;
+  cursor: pointer; transition: all .2s;
+  white-space: nowrap; flex-shrink: 0;
+}
+.btn-print:hover { box-shadow: 0 4px 16px rgba(201,168,76,.4); transform: translateY(-1px); }
 </style>
 </head>
 <body>
@@ -666,10 +736,38 @@ body {
 </div>
 
 
-<!-- PRINT BAR -->
-<div class="print-bar no-print">
-  <span>📚 كتاب وصفات Coach Anis — 50 وصفة رياضية</span>
-  <button class="btn-print" onclick="window.print()">🖨 طباعة / حفظ PDF</button>
+<!-- TOOLBAR -->
+<div class="print-bar no-print" id="toolbar">
+  <button class="btn-print" onclick="window.print()" title="طباعة PDF">🖨 PDF</button>
+
+  <!-- SEARCH -->
+  <div class="tb-search-wrap">
+    <span class="tb-search-icon">🔍</span>
+    <input type="text" id="searchInput" class="tb-search" placeholder="ابحث عن وصفة..." oninput="doSearch(this.value)" autocomplete="off">
+    <button class="tb-clear" id="searchClear" onclick="clearSearch()" title="مسح">✕</button>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="tb-filters" id="tbFilters">
+    <button class="tb-filter on" data-cat="all" onclick="filterCat(this)">الكل</button>
+    <button class="tb-filter" data-cat="breakfast" onclick="filterCat(this)">🌅 إفطار</button>
+    <button class="tb-filter" data-cat="cut" onclick="filterCat(this)">🔥 تنشيف</button>
+    <button class="tb-filter" data-cat="bulk" onclick="filterCat(this)">💪 تضخيم</button>
+    <button class="tb-filter" data-cat="snack" onclick="filterCat(this)">🥜 سناك</button>
+    <button class="tb-filter" data-cat="post" onclick="filterCat(this)">🍝 بعد تمرين</button>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="read-progress no-print" id="readProgress">
+  <div class="read-prog-fill" id="readProgFill"></div>
+  <div class="read-prog-label" id="readProgLabel">0%</div>
+</div>
+
+<!-- SEARCH EMPTY STATE -->
+<div class="search-empty no-print" id="searchEmpty" style="display:none">
+  <div>🔍</div>
+  <div>لا توجد نتائج لـ "<span id="searchEmptyTerm"></span>"</div>
 </div>
 
 <div class="pages">
@@ -823,7 +921,7 @@ body {
 </div>
 
 <!-- RECIPE 01 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="1" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 01</div>
     <div class="recipe-name">بيض مخفوق بالشوفان والجبن</div>
@@ -865,7 +963,7 @@ body {
 </div>
 
 <!-- RECIPE 02 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="2" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 02</div>
     <div class="recipe-name">بان كيك البروتين بالموز</div>
@@ -906,7 +1004,7 @@ body {
 </div>
 
 <!-- RECIPE 03 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="3" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 03</div>
     <div class="recipe-name">زبادي يوناني بالتوت</div>
@@ -947,7 +1045,7 @@ body {
 </div>
 
 <!-- RECIPE 04 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="4" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 04</div>
     <div class="recipe-name">توست البيض والأفوكادو</div>
@@ -988,7 +1086,7 @@ body {
 </div>
 
 <!-- RECIPE 05 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="5" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 05</div>
     <div class="recipe-name">أوملت الخضروات والدجاج</div>
@@ -1029,7 +1127,7 @@ body {
 </div>
 
 <!-- RECIPE 06 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="6" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 06</div>
     <div class="recipe-name">شوفان الليل بالبروتين</div>
@@ -1070,7 +1168,7 @@ body {
 </div>
 
 <!-- RECIPE 07 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="7" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 07</div>
     <div class="recipe-name">فريتاتا الخضروات</div>
@@ -1111,7 +1209,7 @@ body {
 </div>
 
 <!-- RECIPE 08 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="8" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#E8A87A;border:1px solid #E8A87A33">🌅 إفطار · 08</div>
     <div class="recipe-name">كريب البروتين بالفراولة</div>
@@ -1151,7 +1249,7 @@ body {
 </div>
 
 <!-- RECIPE 09 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="9" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#cc5500;border:1px solid #E8A87A33">🌅 إفطار · 09</div>
     <div class="recipe-name">شيك الموز والفول السوداني</div>
@@ -1190,7 +1288,7 @@ body {
 </div>
 
 <!-- RECIPE 10 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="10" data-cat="breakfast">
   <div class="recipe-header" style="border-right:4px solid #E8A87A">
     <div class="recipe-num-badge" style="background:#E8A87A18;color:#cc5500;border:1px solid #E8A87A33">🌅 إفطار · 10</div>
     <div class="recipe-name">فطيرة الشوفان المالتة</div>
@@ -1242,7 +1340,7 @@ body {
 </div>
 
 <!-- RECIPE 11 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="11" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#2DC653;border:1px solid #7AE8B833">🔥 تنشيف · 11</div>
     <div class="recipe-name">سلطة التونة المشوية</div>
@@ -1284,7 +1382,7 @@ body {
 </div>
 
 <!-- RECIPE 12 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="12" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#2DC653;border:1px solid #7AE8B833">🔥 تنشيف · 12</div>
     <div class="recipe-name">دجاج مشوي مع الخضروات</div>
@@ -1325,7 +1423,7 @@ body {
 </div>
 
 <!-- RECIPE 13 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="13" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 13</div>
     <div class="recipe-name">شوربة العدس بالدجاج</div>
@@ -1367,7 +1465,7 @@ body {
 </div>
 
 <!-- RECIPE 14 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="14" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 14</div>
     <div class="recipe-name">سمك مشوي مع الأرز البني</div>
@@ -1407,7 +1505,7 @@ body {
 </div>
 
 <!-- RECIPE 15 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="15" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 15</div>
     <div class="recipe-name">سلطة الكينوا بالجمبري</div>
@@ -1448,7 +1546,7 @@ body {
 </div>
 
 <!-- RECIPE 16 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="16" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 16</div>
     <div class="recipe-name">دجاج تيريياكي خفيف</div>
@@ -1488,7 +1586,7 @@ body {
 </div>
 
 <!-- RECIPE 17 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="17" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 17</div>
     <div class="recipe-name">بيض مسلوق مع خضروات بخار</div>
@@ -1528,7 +1626,7 @@ body {
 </div>
 
 <!-- RECIPE 18 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="18" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 18</div>
     <div class="recipe-name">شوربة الطماطم بالدجاج</div>
@@ -1568,7 +1666,7 @@ body {
 </div>
 
 <!-- RECIPE 19 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="19" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 19</div>
     <div class="recipe-name">سلطة السبانخ والتونة</div>
@@ -1608,7 +1706,7 @@ body {
 </div>
 
 <!-- RECIPE 20 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="20" data-cat="cut">
   <div class="recipe-header" style="border-right:4px solid #7AE8B8">
     <div class="recipe-num-badge" style="background:#7AE8B818;color:#009966;border:1px solid #7AE8B833">🔥 تنشيف · 20</div>
     <div class="recipe-name">رول الدجاج بالخس</div>
@@ -1659,7 +1757,7 @@ body {
 </div>
 
 <!-- RECIPE 21 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="21" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#7AB8E8;border:1px solid #7AB8E833">💪 تضخيم · 21</div>
     <div class="recipe-name">رز بالدجاج وصوص الفول السوداني</div>
@@ -1700,7 +1798,7 @@ body {
 </div>
 
 <!-- RECIPE 22 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="22" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 22</div>
     <div class="recipe-name">مكرونة بالدجاج والكريمة</div>
@@ -1741,7 +1839,7 @@ body {
 </div>
 
 <!-- RECIPE 23 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="23" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 23</div>
     <div class="recipe-name">بطاطا حلوة بالتونة والأفوكادو</div>
@@ -1781,7 +1879,7 @@ body {
 </div>
 
 <!-- RECIPE 24 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="24" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 24</div>
     <div class="recipe-name">برجر الدجاج الرياضي</div>
@@ -1822,7 +1920,7 @@ body {
 </div>
 
 <!-- RECIPE 25 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="25" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 25</div>
     <div class="recipe-name">طاجين اللحم بالخضروات</div>
@@ -1862,7 +1960,7 @@ body {
 </div>
 
 <!-- RECIPE 26 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="26" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 26</div>
     <div class="recipe-name">أرز بالكاري والدجاج</div>
@@ -1902,7 +2000,7 @@ body {
 </div>
 
 <!-- RECIPE 27 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="27" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 27</div>
     <div class="recipe-name">باستا البروتين بالبيض</div>
@@ -1943,7 +2041,7 @@ body {
 </div>
 
 <!-- RECIPE 28 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="28" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 28</div>
     <div class="recipe-name">لحم مفروم مع الكينوا</div>
@@ -1983,7 +2081,7 @@ body {
 </div>
 
 <!-- RECIPE 29 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="29" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 29</div>
     <div class="recipe-name">صدر دجاج محشو بالجبن</div>
@@ -2023,7 +2121,7 @@ body {
 </div>
 
 <!-- RECIPE 30 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="30" data-cat="bulk">
   <div class="recipe-header" style="border-right:4px solid #7AB8E8">
     <div class="recipe-num-badge" style="background:#7AB8E818;color:#0055aa;border:1px solid #7AB8E833">💪 تضخيم · 30</div>
     <div class="recipe-name">بيريتو البروتين</div>
@@ -2076,7 +2174,7 @@ body {
 </div>
 
 <!-- RECIPE 31 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="31" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#C97AE8;border:1px solid #C97AE833">🥜 سناك · 31</div>
     <div class="recipe-name">كرات الطاقة بالشوفان</div>
@@ -2116,7 +2214,7 @@ body {
 </div>
 
 <!-- RECIPE 32 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="32" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 32</div>
     <div class="recipe-name">كريب البروتين بالموز</div>
@@ -2156,7 +2254,7 @@ body {
 </div>
 
 <!-- RECIPE 33 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="33" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 33</div>
     <div class="recipe-name">شيك البروتين الطبيعي</div>
@@ -2195,7 +2293,7 @@ body {
 </div>
 
 <!-- RECIPE 34 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="34" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 34</div>
     <div class="recipe-name">حمص محلي مع الخضروات</div>
@@ -2234,7 +2332,7 @@ body {
 </div>
 
 <!-- RECIPE 35 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="35" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 35</div>
     <div class="recipe-name">تفاح بزبدة الفول السوداني</div>
@@ -2270,7 +2368,7 @@ body {
 </div>
 
 <!-- RECIPE 36 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="36" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 36</div>
     <div class="recipe-name">مكسرات وفواكه مجففة</div>
@@ -2308,7 +2406,7 @@ body {
 </div>
 
 <!-- RECIPE 37 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="37" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 37</div>
     <div class="recipe-name">جبن قريش بالخيار</div>
@@ -2346,7 +2444,7 @@ body {
 </div>
 
 <!-- RECIPE 38 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="38" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 38</div>
     <div class="recipe-name">بار الشوفان محلي الصنع</div>
@@ -2386,7 +2484,7 @@ body {
 </div>
 
 <!-- RECIPE 39 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="39" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 39</div>
     <div class="recipe-name">موس الشوكولاتة الرياضي</div>
@@ -2425,7 +2523,7 @@ body {
 </div>
 
 <!-- RECIPE 40 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="40" data-cat="snack">
   <div class="recipe-header" style="border-right:4px solid #C97AE8">
     <div class="recipe-num-badge" style="background:#C97AE818;color:#7700aa;border:1px solid #C97AE833">🥜 سناك · 40</div>
     <div class="recipe-name">عصير الطاقة الطبيعي</div>
@@ -2476,7 +2574,7 @@ body {
 </div>
 
 <!-- RECIPE 41 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="41" data-cat="post">
   <div class="recipe-header" style="border-right:4px solid #E8E87A">
     <div class="recipe-num-badge" style="background:#E8E87A18;color:#a0a000;border:1px solid #E8E87A33">🍝 بعد التمرين · 41</div>
     <div class="recipe-name">شيك الاسترداد السريع</div>
@@ -2514,7 +2612,7 @@ body {
 </div>
 
 <!-- RECIPE 42 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="42" data-cat="post">
   <div class="recipe-header" style="border-right:4px solid #E8E87A">
     <div class="recipe-num-badge" style="background:#E8E87A18;color:#888800;border:1px solid #E8E87A33">🍝 بعد التمرين · 42</div>
     <div class="recipe-name">رز أبيض بالدجاج المسلوق</div>
@@ -2552,7 +2650,7 @@ body {
 </div>
 
 <!-- RECIPE 43 -->
-<div class="page recipe-page">
+<div class="page recipe-page" data-num="43" data-cat="post">
   <div class="recipe-header" style="border-right:4px solid #E8E87A">
     <div class="recipe-num-badge" style="background:#E8E87A18;color:#888800;border:1px solid #E8E87A33">🍝 بعد التمرين · 43</div>
     <div class="recipe-name">بطاطا مشوية بالتونة</div>
@@ -2646,23 +2744,131 @@ function gateCheck(){
   if(!val){err.innerHTML='⚠️ من فضلك أدخل الكود';inp.classList.add('gerror');setTimeout(function(){inp.classList.remove('gerror');},600);return;}
   btn.classList.add('gloading');btn.textContent='...جارٍ التحقق';
   setTimeout(function(){
-    if(val==='anis2006'){
-      inp.classList.add('gsuccess');
-      var s=document.getElementById('gateSuccess');s.classList.add('show');
-      setTimeout(function(){document.getElementById('gateProgFill').style.width='100%';},100);
-      setTimeout(function(){
-        var ov=document.getElementById('gate-overlay');
-        ov.classList.add('hide');
-        setTimeout(function(){ov.style.display='none';},700);
-      },1700);
-    } else {
-      btn.classList.remove('gloading');btn.textContent='دخول ←';
-      inp.classList.add('gerror');inp.value='';
-      err.innerHTML='✗ الكود غير صحيح، حاول مجدداً';
-      setTimeout(function(){inp.classList.remove('gerror');err.textContent='';},2500);
-      inp.focus();
-    }
+    const encoder = new TextEncoder();
+    const data = encoder.encode(val);
+    crypto.subtle.digest('SHA-256', data).then(function(hashBuffer){
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+      const CORRECT = '071b490ece953d7b6779b391b526aceaa4f6977a61e516921a380795a6443f29';
+      if(hashHex === CORRECT){
+        inp.classList.add('gsuccess');
+        var s=document.getElementById('gateSuccess');
+        s.classList.add('show');
+        setTimeout(function(){document.getElementById('gateProgFill').style.width='100%';},100);
+        setTimeout(function(){
+          var ov=document.getElementById('gate-overlay');
+          ov.classList.add('hide');
+          setTimeout(function(){ov.style.display='none';},700);
+        },1700);
+      } else {
+        btn.classList.remove('gloading');btn.textContent='دخول ←';
+        inp.classList.add('gerror');inp.value='';
+        err.innerHTML='✗ الكود غير صحيح، حاول مجدداً';
+        setTimeout(function(){inp.classList.remove('gerror');err.textContent='';},2500);
+        inp.focus();
+      }
+    });
   },700);
+}
+</script>
+
+
+<script>
+/* ══════════════════════════════════════
+   READING PROGRESS BAR
+══════════════════════════════════════ */
+function updateProgress() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docH > 0 ? Math.round((scrollTop / docH) * 100) : 0;
+  document.getElementById('readProgFill').style.width = pct + '%';
+  document.getElementById('readProgLabel').textContent = pct + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+updateProgress();
+
+/* ══════════════════════════════════════
+   FILTER BY CATEGORY
+══════════════════════════════════════ */
+let activeCat = 'all';
+let activeSearch = '';
+
+function filterCat(btn) {
+  document.querySelectorAll('.tb-filter').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  activeCat = btn.dataset.cat;
+  applyFilters();
+}
+
+/* ══════════════════════════════════════
+   SEARCH
+══════════════════════════════════════ */
+function doSearch(val) {
+  activeSearch = val.trim();
+  document.getElementById('searchClear').classList.toggle('show', activeSearch.length > 0);
+  applyFilters();
+}
+
+function clearSearch() {
+  document.getElementById('searchInput').value = '';
+  activeSearch = '';
+  document.getElementById('searchClear').classList.remove('show');
+  applyFilters();
+  document.getElementById('searchInput').focus();
+}
+
+/* ══════════════════════════════════════
+   APPLY BOTH FILTER + SEARCH
+══════════════════════════════════════ */
+function applyFilters() {
+  const recipes = document.querySelectorAll('.recipe-page');
+  const dividers = document.querySelectorAll('.section-divider');
+  const cover = document.querySelector('.cover');
+  const toc = document.querySelector('.toc-page');
+  const backCover = document.querySelector('.back-cover');
+  const searchTerm = activeSearch.toLowerCase();
+  let visibleCount = 0;
+
+  const isFiltering = activeCat !== 'all' || activeSearch !== '';
+
+  // Show/hide structural pages
+  [cover, toc, backCover].forEach(el => {
+    if (el) el.style.display = isFiltering ? 'none' : '';
+  });
+
+  // Show/hide section dividers
+  dividers.forEach(el => {
+    if (isFiltering) {
+      el.style.display = 'none';
+    } else {
+      el.style.display = '';
+    }
+  });
+
+  // Filter recipes
+  recipes.forEach(el => {
+    const cat = el.dataset.cat || '';
+    const nameEl = el.querySelector('.recipe-name');
+    const name = nameEl ? nameEl.textContent.toLowerCase() : '';
+    const descEl = el.querySelector('.recipe-desc');
+    const desc = descEl ? descEl.textContent.toLowerCase() : '';
+
+    const catMatch = activeCat === 'all' || cat === activeCat;
+    const searchMatch = searchTerm === '' || name.includes(searchTerm) || desc.includes(searchTerm);
+
+    const show = catMatch && searchMatch;
+    el.style.display = show ? '' : 'none';
+    if (show) visibleCount++;
+  });
+
+  // Show/hide empty state
+  const emptyEl = document.getElementById('searchEmpty');
+  if (isFiltering && visibleCount === 0) {
+    emptyEl.style.display = 'flex';
+    document.getElementById('searchEmptyTerm').textContent = activeSearch || activeCat;
+  } else {
+    emptyEl.style.display = 'none';
+  }
 }
 </script>
 
