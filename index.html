@@ -3,30 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nutrition Library | Coach Anis</title>
-<meta name="description" content="High-protein recipes with full macros. Breakfast, meals, snacks and smoothies for training and fat loss.">
-<meta property="og:title" content="Nutrition Library | Coach Anis">
-<meta property="og:description" content="High-protein recipes with calories, protein, carbs and fat for every recipe.">
-<meta property="og:url" content="https://coach-anis.github.io/recipe-book/">
+<title>Coach Anis — High Protein Recipes</title>
+<meta name="description" content="50 high-protein recipes with full macros. Clean, practical nutrition for training and fat loss.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0a0a0b;
-  --bg2: #111113;
-  --card: #18181b;
-  --card-hover: #1f1f23;
-  --gold: #c9a84c;
-  --gold2: #e0c070;
+  --bg: #09090b;
+  --surface: #111113;
+  --surface2: #18181b;
+  --surface3: #1f1f23;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.12);
   --text: #fafafa;
-  --muted: #a1a1aa;
-  --border: rgba(255,255,255,0.08);
-  --radius: 14px;
-  --font: 'DM Sans', system-ui, sans-serif;
-  --serif: 'Instrument Serif', Georgia, serif;
+  --text2: #a1a1aa;
+  --text3: #71717a;
+  --accent: #22c55e;
+  --accent2: #16a34a;
+  --accent-soft: rgba(34,197,94,0.12);
+  --gold: #eab308;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --display: 'Syne', system-ui, sans-serif;
 }
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -36,1259 +40,802 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
-  line-height: 1.55;
+  line-height: 1.6;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 button, input { font-family: inherit; }
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a { color: inherit; text-decoration: none; }
 
-/* NAV */
+/* ========== NAV ========== */
 .nav {
-  position: sticky; top: 0; z-index: 100;
-  height: 60px;
-  background: rgba(10,10,11,0.9);
-  backdrop-filter: blur(16px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 64px;
+  background: rgba(9,9,11,0.85);
+  backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; gap: 16px;
-  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 28px;
 }
-.nav-brand {
-  font-family: var(--serif);
-  font-size: 20px;
-  color: var(--gold);
-  white-space: nowrap;
-  letter-spacing: 0.02em;
+.nav-logo {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-logo span {
+  color: var(--accent);
 }
 .nav-search {
-  flex: 1; max-width: 380px; margin: 0 auto; position: relative;
+  flex: 1;
+  max-width: 420px;
+  margin: 0 auto;
+  position: relative;
 }
 .nav-search input {
   width: 100%;
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 9px 16px 9px 40px;
+  padding: 10px 16px 10px 42px;
   color: var(--text);
   font-size: 14px;
   outline: none;
-  transition: border-color .2s;
+  transition: border-color .2s, background .2s;
 }
-.nav-search input:focus { border-color: rgba(201,168,76,0.45); }
-.nav-search input::placeholder { color: #52525b; }
+.nav-search input:focus {
+  border-color: rgba(34,197,94,0.4);
+  background: var(--surface2);
+}
+.nav-search input::placeholder { color: var(--text3); }
 .nav-search svg {
-  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-  width: 16px; height: 16px; color: #52525b; pointer-events: none;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--text3);
+  pointer-events: none;
 }
-.nav-actions { display: flex; gap: 8px; }
+.nav-actions {
+  display: flex;
+  gap: 8px;
+}
 .nav-btn {
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 8px 14px;
-  color: var(--muted);
+  color: var(--text2);
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   transition: all .15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .nav-btn:hover, .nav-btn.active {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 .nav-fav-count {
   display: none;
-  min-width: 18px; height: 18px;
-  background: var(--gold); color: #000;
-  border-radius: 50%;
-  font-size: 11px; font-weight: 700;
-  align-items: center; justify-content: center;
-  margin-left: 4px;
+  background: var(--accent);
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 1px 6px;
+  min-width: 18px;
+  text-align: center;
 }
-@media (max-width: 640px) {
-  .nav { padding: 0 14px; gap: 10px; }
-  .nav-brand { font-size: 17px; }
-  .nav-btn span.label { display: none; }
-}
+.nav-fav-count.show { display: inline-block; }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 56px 24px 40px;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
-  align-items: center;
+  padding: 72px 28px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.hero-eyebrow {
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(34,197,94,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
 }
 .hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(32px, 5vw, 48px);
-  font-weight: 400;
-  line-height: 1.15;
-  margin-bottom: 14px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--accent);
 }
 .hero p {
-  font-size: 15px;
-  color: var(--muted);
-  max-width: 420px;
-  margin-bottom: 28px;
-  line-height: 1.7;
+  color: var(--text2);
+  font-size: 17px;
+  max-width: 480px;
+  margin: 0 auto 32px;
 }
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold), var(--gold2));
-  color: #111;
-  border: none;
-  border-radius: 11px;
-  padding: 12px 22px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform .15s, box-shadow .2s;
-}
-.btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(201,168,76,0.25);
-}
-.btn-ghost {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text);
-  border-radius: 11px;
-  padding: 12px 22px;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: border-color .15s, color .15s;
-}
-.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 .hero-stats {
-  display: flex; gap: 32px;
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
-.hero-stat-n {
-  font-family: var(--serif);
-  font-size: 28px;
-  color: var(--gold);
-  line-height: 1;
-}
-.hero-stat-l {
-  font-size: 11px;
-  color: var(--muted);
-  margin-top: 4px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.featured {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 28px;
-  position: relative;
-}
-.featured-label {
-  position: absolute;
-  top: 16px; right: 16px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--gold);
-  background: rgba(201,168,76,0.12);
-  border: 1px solid rgba(201,168,76,0.25);
-  border-radius: 999px;
-  padding: 4px 10px;
-}
-.featured-cat {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 8px;
-}
-.featured h3 {
-  font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 8px;
-  line-height: 1.25;
-}
-.featured p {
-  font-size: 13px;
-  color: var(--muted);
-  margin-bottom: 18px;
-  line-height: 1.55;
-}
-.featured-macros {
-  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;
-}
-.f-macro {
-  background: rgba(255,255,255,0.04);
-  border-radius: 8px;
-  padding: 8px 12px;
+.hero-stat {
   text-align: center;
-  min-width: 64px;
 }
-.f-macro-v {
-  font-size: 16px;
+.hero-stat strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 28px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--text);
+  letter-spacing: -0.02em;
 }
-.f-macro-l {
-  font-size: 10px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-@media (max-width: 800px) {
-  .hero { grid-template-columns: 1fr; gap: 28px; padding: 36px 16px 28px; }
-  .featured { order: -1; }
+.hero-stat span {
+  font-size: 13px;
+  color: var(--text3);
+  font-weight: 500;
 }
 
-/* FILTERS */
-.section {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px 20px;
-}
-.section-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-.section-head h2 {
-  font-family: var(--serif);
-  font-size: 24px;
-  font-weight: 400;
-}
-.results-count { font-size: 13px; color: var(--muted); }
+/* ========== FILTERS ========== */
 .filters {
+  padding: 0 28px 32px;
   display: flex;
-  gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  gap: 8px;
+  justify-content: center;
 }
-.chip {
-  background: var(--card);
+.filter-btn {
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 7px 14px;
+  padding: 8px 16px;
+  color: var(--text2);
   font-size: 13px;
-  color: var(--muted);
+  font-weight: 500;
   cursor: pointer;
   transition: all .15s;
-  font-weight: 500;
 }
-.chip:hover { border-color: rgba(201,168,76,0.4); color: var(--text); }
-.chip.on {
-  background: rgba(201,168,76,0.12);
-  border-color: var(--gold);
-  color: var(--gold);
+.filter-btn:hover {
+  border-color: var(--border2);
+  color: var(--text);
 }
-.clear-btn {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 13px;
-  cursor: pointer;
-  text-decoration: underline;
-  padding: 7px 8px;
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+  font-weight: 600;
 }
-.clear-btn:hover { color: var(--gold); }
 
-/* GRID */
+/* ========== GRID ========== */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 28px 80px;
+}
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px 64px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
-@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
-@media (max-width: 560px) { .grid { grid-template-columns: 1fr; padding: 0 16px 48px; } }
-
 .card {
-  background: var(--card);
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: hidden;
+  padding: 24px;
   cursor: pointer;
-  transition: transform .2s, border-color .2s, background .2s;
+  transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 .card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(201,168,76,0.3);
-  background: var(--card-hover);
+  border-color: var(--border2);
+  background: var(--surface2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
 }
-.card-top {
-  height: 8px;
-  background: linear-gradient(90deg, var(--gold), transparent);
-  opacity: 0.5;
-}
-.card-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
 .card-cat {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 6px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 10px;
 }
-.card-name {
-  font-size: 16px;
-  font-weight: 600;
+.card-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 18px;
   line-height: 1.3;
-  margin-bottom: 6px;
-}
-.card-desc {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.45;
-  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
   flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.card-meta {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-.card-meta span {
-  font-size: 11px;
-  color: var(--muted);
-  background: rgba(255,255,255,0.04);
-  border-radius: 6px;
-  padding: 3px 8px;
 }
 .card-macros {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  border-top: 1px solid var(--border);
-  padding-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 }
-.cm { text-align: center; }
-.cm-v { font-size: 15px; font-weight: 700; line-height: 1; }
-.cm-v.kcal { color: var(--gold); }
-.cm-v.prot { color: #e8a87a; }
-.cm-l { font-size: 9px; color: #71717a; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
-.card-fav {
-  position: absolute;
-  top: 14px; right: 14px;
-  background: rgba(0,0,0,0.5);
-  border: none;
-  border-radius: 50%;
-  width: 32px; height: 32px;
-  color: #71717a;
-  cursor: pointer;
-  font-size: 11px; font-weight: 600;
+.macro {
+  font-size: 12px;
+  color: var(--text3);
+  font-weight: 500;
+}
+.macro strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.card-footer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: color .15s;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
 }
-.card-fav.on, .card-fav:hover { color: var(--gold); }
-.card { position: relative; }
+.card-time {
+  font-size: 12px;
+  color: var(--text3);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-fav {
+  background: none;
+  border: none;
+  color: var(--text3);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color .15s;
+  display: flex;
+  align-items: center;
+}
+.card-fav:hover, .card-fav.active {
+  color: #f43f5e;
+}
+.card-fav svg { width: 18px; height: 18px; }
 
 .empty {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 64px 20px;
-  color: var(--muted);
+  padding: 60px 20px;
+  color: var(--text3);
 }
-.empty-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.empty h3 {
+  font-family: var(--display);
+  font-size: 20px;
+  color: var(--text2);
+  margin-bottom: 8px;
+}
 
-/* MODAL */
-.overlay {
-  position: fixed; inset: 0; z-index: 500;
-  background: rgba(0,0,0,0.72);
+/* ========== MODAL ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(8px);
+  z-index: 200;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s;
-}
-.overlay.open { opacity: 1; pointer-events: all; }
-.modal {
-  background: var(--bg2);
-  border-radius: 18px 18px 0 0;
-  width: 100%;
-  max-width: 620px;
-  max-height: 92vh;
+  padding: 40px 20px;
   overflow-y: auto;
-  transform: translateY(40px);
-  transition: transform .3s cubic-bezier(.16,1,.3,1);
-  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .25s;
 }
-.overlay.open .modal { transform: translateY(0); }
-@media (min-width: 640px) {
-  .overlay { align-items: center; padding: 24px; }
-  .modal { border-radius: 18px; max-height: 88vh; }
+.modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 640px;
+  padding: 36px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform .25s;
+}
+.modal-overlay.open .modal {
+  transform: translateY(0);
 }
 .modal-close {
-  position: sticky; top: 12px; float: right;
-  margin: 12px 12px 0 0;
-  width: 36px; height: 36px;
-  background: rgba(0,0,0,0.55);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--surface2);
   border: 1px solid var(--border);
-  border-radius: 50%;
-  color: var(--text);
-  font-size: 18px;
-  cursor: pointer;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  cursor: pointer;
+  color: var(--text2);
+  transition: all .15s;
 }
-.modal-inner { padding: 8px 28px 28px; }
+.modal-close:hover {
+  background: var(--surface3);
+  color: var(--text);
+}
 .modal-cat {
   font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--gold);
+  letter-spacing: 0.06em;
+  color: var(--accent);
   margin-bottom: 8px;
 }
-.modal h2 {
-  font-family: var(--serif);
-  font-size: 26px;
-  font-weight: 400;
+.modal-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 28px;
   line-height: 1.2;
-  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  padding-right: 40px;
 }
-.modal-desc {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 12px;
-  line-height: 1.55;
+.modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
 }
-.modal-tags {
-  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+.meta-item {
+  font-size: 13px;
+  color: var(--text3);
 }
-.modal-tag {
-  font-size: 12px;
-  color: var(--muted);
-  background: rgba(255,255,255,0.05);
-  border-radius: 8px;
-  padding: 4px 10px;
+.meta-item strong {
+  color: var(--text);
+  font-weight: 600;
 }
 .modal-macros {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-  margin-bottom: 24px;
+  gap: 12px;
+  margin-bottom: 32px;
 }
-.mm {
-  background: var(--card);
-  border: 1px solid var(--border);
+.macro-box {
+  background: var(--surface2);
   border-radius: 12px;
-  padding: 14px 8px;
+  padding: 14px 12px;
   text-align: center;
 }
-.mm-v { font-size: 22px; font-weight: 700; line-height: 1; }
-.mm-v.kcal { color: var(--gold); }
-.mm-v.prot { color: #e8a87a; }
-.mm-v.carb { color: #7ab8e8; }
-.mm-v.fat { color: #e87a7a; }
-.mm-l { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
-.sec-title {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.macro-box strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+.macro-box span {
+  font-size: 11px;
+  color: var(--text3);
+  font-weight: 500;
   text-transform: uppercase;
-  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+.section-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
   margin-bottom: 12px;
-  padding-bottom: 6px;
+  color: var(--text);
+}
+.ingredients {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.ingredients li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text2);
+  display: flex;
+  gap: 10px;
+}
+.ingredients li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin-bottom: 28px;
+}
+.steps li {
+  counter-increment: step;
+  padding: 12px 0 12px 40px;
+  position: relative;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.6;
   border-bottom: 1px solid var(--border);
 }
-.ing-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-  font-size: 14px;
-}
-.ing-row input { width: 16px; height: 16px; accent-color: var(--gold); cursor: pointer; flex-shrink: 0; }
-.ing-row.done .ing-name { text-decoration: line-through; color: #52525b; }
-.ing-name { flex: 1; }
-.ing-qty {
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 26px;
+  height: 26px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 8px;
   font-size: 12px;
-  font-weight: 600;
-  color: var(--gold);
-  background: rgba(201,168,76,0.1);
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-.step {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-.step-n {
-  width: 26px; height: 26px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: #111;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 1px;
 }
-.step-t { font-size: 14px; color: var(--muted); line-height: 1.6; }
 .modal-actions {
   display: flex;
   gap: 10px;
-  margin-top: 24px;
-  flex-wrap: wrap;
+  margin-top: 8px;
 }
-.modal-actions button {
-  flex: 1;
-  min-width: 120px;
-  padding: 11px;
-  border-radius: 10px;
-  font-size: 13px;
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
-  color: var(--text);
   transition: all .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
-.modal-actions button:hover { border-color: var(--gold); color: var(--gold); }
-.modal-actions .on { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.1); }
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+}
+.btn-primary:hover {
+  background: var(--accent2);
+}
+.btn-ghost {
+  background: var(--surface2);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: var(--surface3);
+  color: var(--text);
+}
+.btn-ghost.active {
+  color: #f43f5e;
+  border-color: rgba(244,63,94,0.3);
+}
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 .footer {
   border-top: 1px solid var(--border);
-  padding: 36px 24px;
+  padding: 32px 28px;
   text-align: center;
-  max-width: 1080px;
-  margin: 0 auto;
+  color: var(--text3);
+  font-size: 13px;
 }
-.footer-brand {
-  font-family: var(--serif);
-  font-size: 16px;
-  color: var(--gold);
-  margin-bottom: 6px;
+.footer strong {
+  color: var(--text2);
+  font-weight: 600;
 }
-.footer-handle { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
-.footer-copy { font-size: 12px; color: #52525b; }
 
-.btt {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 90;
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--gold);
-  font-size: 18px;
-  cursor: pointer;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  transition: background .15s, transform .15s;
+/* ========== RESPONSIVE ========== */
+@media (max-width: 640px) {
+  .nav { padding: 0 16px; gap: 12px; }
+  .nav-logo { font-size: 16px; }
+  .nav-search { max-width: none; }
+  .nav-actions .nav-btn span { display: none; }
+  .hero { padding: 48px 16px 36px; }
+  .hero-stats { gap: 24px; }
+  .filters { padding: 0 16px 24px; }
+  .main { padding: 0 16px 60px; }
+  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .modal { padding: 28px 20px; border-radius: 16px; }
+  .modal-title { font-size: 22px; }
+  .modal-macros { grid-template-columns: repeat(2, 1fr); }
 }
-.btt.show { display: flex; }
-.btt:hover { background: var(--card-hover); transform: translateY(-2px); }
 
 @media print {
-  .nav, .hero, .section, .grid, .footer, .btt, .overlay .modal-close, .modal-actions { display: none !important; }
-  .overlay { position: static; opacity: 1; pointer-events: all; background: #fff; }
-  .modal { max-height: none; transform: none; background: #fff; color: #111; }
-  body { background: #fff; color: #111; }
+  .nav, .filters, .hero, .modal-close, .modal-actions, .card-fav { display: none !important; }
+  .modal-overlay { position: static; background: none; padding: 0; }
+  .modal { box-shadow: none; border: none; max-width: 100%; }
+  body { background: white; color: black; }
 }
 </style>
 </head>
 <body>
 
-<nav class="nav" role="navigation">
-  <div class="nav-brand">Coach Anis</div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">Coach <span>Anis</span></div>
   <div class="nav-search">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
-    <input type="search" id="searchInput" placeholder="Search recipes..." autocomplete="off" aria-label="Search recipes">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input type="search" id="search" placeholder="Search recipes..." autocomplete="off">
   </div>
   <div class="nav-actions">
-    <button class="nav-btn" id="favBtn" type="button" aria-pressed="false">
-      Favorites <span class="nav-fav-count" id="favCount">0</span>
+    <button class="nav-btn" id="favToggle" onclick="toggleFavView()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      <span>Favorites</span>
+      <span class="nav-fav-count" id="favCount">0</span>
     </button>
   </div>
 </nav>
 
-<header class="hero">
-  <div>
-    <div class="hero-eyebrow">Coach Anis · Nutrition Library</div>
-    <h1>Eat smart.<br>Train hard.</h1>
-    <p>Practical high-protein recipes with full macros — calories, protein, carbs and fat — so you can hit your goals without guesswork.</p>
-    <div class="hero-actions">
-      <button class="btn-primary" id="exploreBtn" type="button">Browse recipes</button>
-      <button class="btn-ghost" id="focusSearch" type="button">Search</button>
-    </div>
-    <div class="hero-stats">
-      <div><div class="hero-stat-n" id="statCount">0</div><div class="hero-stat-l">Recipes</div></div>
-      <div><div class="hero-stat-n">5</div><div class="hero-stat-l">Categories</div></div>
-    </div>
-  </div>
-  <div class="featured" id="featuredBox"></div>
-</header>
-
-<section class="section" id="library">
-  <div class="section-head">
-    <h2>Recipe library</h2>
-    <div class="results-count" id="resultsCount">0 recipes</div>
-  </div>
-  <div class="filters" id="filters" role="group" aria-label="Filter by category">
-    <button class="chip on" data-cat="all" type="button">All</button>
-    <button class="chip" data-cat="breakfast" type="button">Breakfast</button>
-    <button class="chip" data-cat="meal" type="button">Meals</button>
-    <button class="chip" data-cat="salad" type="button">Salads</button>
-    <button class="chip" data-cat="snack" type="button">Snacks</button>
-    <button class="chip" data-cat="smoothie" type="button">Smoothies</button>
-    <button class="clear-btn" id="clearBtn" type="button" style="display:none">Clear filters</button>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">High Protein • Macro Friendly</div>
+  <h1>Practical recipes<br>for <em>serious results</em></h1>
+  <p>Clean, high-protein meals with full macros. Built for training, fat loss and performance.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><strong id="recipeCount">50</strong><span>Recipes</span></div>
+    <div class="hero-stat"><strong>High</strong><span>Protein Focus</span></div>
+    <div class="hero-stat"><strong>Full</strong><span>Macros</span></div>
   </div>
 </section>
 
-<div class="grid" id="grid" role="list"></div>
-
-<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-  <div class="modal" id="modal">
-    <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
-    <div class="modal-inner" id="modalContent"></div>
-  </div>
+<!-- FILTERS -->
+<div class="filters" id="filters">
+  <button class="filter-btn active" data-cat="all">All</button>
+  <button class="filter-btn" data-cat="breakfast">Breakfast</button>
+  <button class="filter-btn" data-cat="lunch">Lunch</button>
+  <button class="filter-btn" data-cat="dinner">Dinner</button>
+  <button class="filter-btn" data-cat="salad">Salad</button>
+  <button class="filter-btn" data-cat="smoothie">Smoothie</button>
+  <button class="filter-btn" data-cat="snack">Snack</button>
 </div>
 
+<!-- GRID -->
+<main class="main">
+  <div class="grid" id="grid"></div>
+</main>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-brand">Coach Anis</div>
-  <div class="footer-handle">@coach__anis</div>
-  <div class="footer-copy">Recipes compiled for practical high-protein nutrition. Macros are approximate.</div>
+  <strong>Coach Anis</strong> — High Protein Recipe Library
 </footer>
 
-<button class="btt" id="btt" type="button" aria-label="Back to top">↑</button>
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal" id="modalContent"></div>
+</div>
 
 <script>
-const RECIPES = [
-  {
-    id: 1, cat: "breakfast", name: "Spanish Zucchini Tortilla",
-    desc: "Classic Spanish-style tortilla with potato, onion and zucchini.",
-    servings: "2", prep: "10 min", cook: "25 min",
-    kcal: "377", protein: "21g", carbs: "22g", fat: "22g",
-    ingredients: [
-      {name: "Olive oil", qty: "1 tbsp"},
-      {name: "Potato, peeled and chopped", qty: "1 small"},
-      {name: "Onion, chopped", qty: "1 small"},
-      {name: "Zucchini, thinly sliced", qty: "½ small"},
-      {name: "Eggs", qty: "6"}
-    ],
-    steps: [
-      "Heat oil in a non-stick pan and sear the potato and onion over medium-high heat for about 4 minutes. Add zucchini and sauté another 4 minutes.",
-      "Whisk eggs in a bowl and season with salt and pepper. Transfer vegetables into the bowl and mix.",
-      "Pour the egg mixture into the same pan on low heat. After about 3 minutes, run a spatula around the edges.",
-      "After 8–10 minutes, flip the tortilla using a plate, then cook the other side 5–6 minutes until set. Serve."
-    ]
-  },
-  {
-    id: 2, cat: "breakfast", name: "Omelet Wraps",
-    desc: "Thin omelets filled with cottage cheese, watercress and smoked salmon.",
-    servings: "4", prep: "15 min", cook: "10 min",
-    kcal: "237", protein: "20g", carbs: "3g", fat: "15g",
-    ingredients: [
-      {name: "Cottage cheese", qty: "200g"},
-      {name: "Watercress", qty: "4 handfuls"},
-      {name: "Lemon peel", qty: "1 lemon"},
-      {name: "Eggs", qty: "6"},
-      {name: "Soy milk", qty: "50ml"},
-      {name: "Mixed herbs", qty: "1 tsp"},
-      {name: "Coconut oil", qty: "4 tsp"},
-      {name: "Smoked salmon, chopped", qty: "100g"}
-    ],
-    steps: [
-      "Blend cottage cheese, watercress and lemon peel until smooth.",
-      "Beat eggs with milk and herbs.",
-      "Heat 1 tsp oil and cook ¼ of the egg mixture until set, flip briefly, then set aside. Repeat for remaining omelets.",
-      "Spread the cottage cheese paste over each omelet, top with smoked salmon, roll and cut in half."
-    ]
-  },
-  {
-    id: 3, cat: "breakfast", name: "Egg & Turkey Stuffed Peppers",
-    desc: "Bell peppers stuffed with scrambled eggs, lean turkey and spinach.",
-    servings: "4", prep: "5 min", cook: "20 min",
-    kcal: "329", protein: "43g", carbs: "11g", fat: "12g",
-    ingredients: [
-      {name: "Eggs", qty: "4"},
-      {name: "Egg whites", qty: "4"},
-      {name: "Almond milk", qty: "2 tbsp"},
-      {name: "Coconut oil", qty: "1 tsp"},
-      {name: "Onion, chopped", qty: "1 small"},
-      {name: "Lean ground turkey", qty: "450g"},
-      {name: "Oregano", qty: "2 tsp"},
-      {name: "Cumin", qty: "1 tsp"},
-      {name: "Spinach, chopped", qty: "60g"},
-      {name: "Red bell peppers", qty: "4 medium"},
-      {name: "Cheese, grated", qty: "50g"}
-    ],
-    steps: [
-      "Heat oven to 200°C (400°F).",
-      "Beat eggs, egg whites and milk; set aside.",
-      "Cook onion in coconut oil 3 minutes. Add turkey, oregano and cumin; cook through about 5 minutes. Add spinach until wilted.",
-      "Add eggs and scramble about 3 minutes.",
-      "Halve peppers, remove seeds, stuff with the mixture, top with cheese and bake 15 minutes."
-    ]
-  },
-  {
-    id: 4, cat: "breakfast", name: "Smoked Salmon, Feta & Asparagus Omelet",
-    desc: "Oven-finished omelet with salmon, feta, asparagus and cherry tomatoes.",
-    servings: "2", prep: "10 min", cook: "15 min",
-    kcal: "302", protein: "20g", carbs: "6g", fat: "21g",
-    ingredients: [
-      {name: "Asparagus", qty: "125g"},
-      {name: "Coconut oil", qty: "1 tsp"},
-      {name: "Large eggs", qty: "3"},
-      {name: "Milk", qty: "70ml"},
-      {name: "Smoked salmon, pieces", qty: "60g"},
-      {name: "Feta, cubed", qty: "30g"},
-      {name: "Cherry tomatoes, halved", qty: "4–5"},
-      {name: "Dill", qty: "to serve"}
-    ],
-    steps: [
-      "Trim asparagus and boil 2 minutes; drain.",
-      "Whisk eggs with milk, salt and pepper. Add asparagus, salmon and feta.",
-      "Heat oil in an oven-safe pan, pour in mixture, top with tomatoes. Cover and cook 5 minutes.",
-      "Finish in oven at 180°C for 6–10 minutes until set. Serve with dill."
-    ]
-  },
-  {
-    id: 5, cat: "breakfast", name: "High Protein Blueberry Pancakes",
-    desc: "Single-serving protein pancakes with banana and blueberries.",
-    servings: "1", prep: "5 min", cook: "10 min",
-    kcal: "257", protein: "36g", carbs: "18g", fat: "5g",
-    ingredients: [
-      {name: "Liquid egg whites", qty: "¼ cup (about 4 eggs)"},
-      {name: "Vanilla whey protein", qty: "25g"},
-      {name: "Banana, mashed", qty: "½"},
-      {name: "Blueberries", qty: "25g"},
-      {name: "Coconut oil", qty: "½ tsp"},
-      {name: "Almond milk", qty: "splash if needed"}
-    ],
-    steps: [
-      "Whisk egg whites and protein powder. Stir in banana and blueberries; thin with almond milk if needed.",
-      "Cook in coconut oil over low-medium heat until bubbles form (about 5 minutes), then flip and cook 2–3 minutes more.",
-      "Serve with preferred toppings."
-    ]
-  },
-  {
-    id: 6, cat: "salad", name: "Tuna Salad Lettuce Wraps",
-    desc: "Quick no-cook tuna salad with apple and onion in lettuce cups.",
-    servings: "2", prep: "10 min", cook: "0 min",
-    kcal: "286", protein: "38g", carbs: "14g", fat: "9g",
-    ingredients: [
-      {name: "Tuna in olive oil, drained", qty: "280g"},
-      {name: "Tomato puree", qty: "1 tbsp"},
-      {name: "Red onion, finely chopped", qty: "1 small"},
-      {name: "Granny Smith apple", qty: "½"},
-      {name: "Lettuce leaves", qty: "8"}
-    ],
-    steps: [
-      "Mix tuna with half the oil from the can and tomato puree.",
-      "Add finely chopped onion and diced apple; mix well.",
-      "Spoon onto lettuce leaves and serve as wraps."
-    ]
-  },
-  {
-    id: 7, cat: "salad", name: "Grilled Chicken & Pineapple Salad",
-    desc: "Grilled chicken with pineapple, mint and a ginger-lime dressing.",
-    servings: "2", prep: "10 min", cook: "13 min",
-    kcal: "356", protein: "27g", carbs: "34g", fat: "16g",
-    ingredients: [
-      {name: "Chicken breast", qty: "200g"},
-      {name: "Pineapple slices, canned", qty: "4"},
-      {name: "Salad leaves", qty: "2 handfuls"},
-      {name: "Mint leaves", qty: "10g"},
-      {name: "Onion, finely chopped", qty: "½ small"},
-      {name: "Olive oil", qty: "2 tbsp"},
-      {name: "Ginger, grated", qty: "1 tsp"},
-      {name: "Garlic, minced", qty: "1 clove"},
-      {name: "Lime, juiced", qty: "1"},
-      {name: "Honey", qty: "1 tsp"}
-    ],
-    steps: [
-      "Mix dressing ingredients; toss with salad and mint leaves.",
-      "Butterfly chicken, grill with pineapple on top 6–8 minutes per side.",
-      "Rest chicken 3 minutes, slice, and add to salad with pineapple and onion."
-    ]
-  },
-  {
-    id: 8, cat: "meal", name: "Miso Salmon With Zucchini Noodles",
-    desc: "Miso-glazed salmon with sesame zucchini noodle salad.",
-    servings: "2", prep: "20 min", cook: "15 min",
-    kcal: "496", protein: "29g", carbs: "27g", fat: "30g",
-    ingredients: [
-      {name: "Salmon fillets", qty: "2 × 130g"},
-      {name: "Miso paste", qty: "2 tbsp"},
-      {name: "Honey", qty: "2 tbsp"},
-      {name: "Tamari or soy sauce", qty: "60ml"},
-      {name: "Ginger, grated", qty: "2 tbsp"},
-      {name: "Apple cider vinegar", qty: "2 tbsp"},
-      {name: "Sesame oil", qty: "1 tbsp"},
-      {name: "Sesame seeds", qty: "2 tsp"},
-      {name: "Zucchini noodles", qty: "400g"},
-      {name: "Radishes, sliced", qty: "6"}
-    ],
-    steps: [
-      "Mix marinade, coat salmon and refrigerate at least 20 minutes.",
-      "Toss zucchini noodles and radish with remaining dressing ingredients; chill.",
-      "Bake salmon at 180°C for 12 minutes, then broil 2–3 minutes. Serve with noodles and sesame seeds."
-    ]
-  },
-  {
-    id: 9, cat: "meal", name: "Turkey & Broccoli Stir Fry",
-    desc: "Turkey and broccoli with black rice noodles in a sesame-soy sauce.",
-    servings: "2", prep: "10 min", cook: "20 min",
-    kcal: "494", protein: "42g", carbs: "56g", fat: "16g",
-    ingredients: [
-      {name: "Black rice noodles", qty: "100g"},
-      {name: "Turkey fillet, chopped", qty: "200g"},
-      {name: "Broccoli florets", qty: "1 head"},
-      {name: "Olive oil", qty: "1 tbsp"},
-      {name: "Soy or tamari sauce", qty: "4 tbsp"},
-      {name: "Sesame oil", qty: "2 tsp"},
-      {name: "Rice vinegar", qty: "1 tbsp"},
-      {name: "Ginger, grated", qty: "1 tbsp"},
-      {name: "Spring onion, chopped", qty: "2 tbsp"}
-    ],
-    steps: [
-      "Cook noodles; rinse and set aside.",
-      "Stir-fry turkey 3–4 minutes, add broccoli, then a splash of water and 3 tbsp soy sauce; cook until tender.",
-      "Mix remaining soy, sesame oil, vinegar and ginger. Add noodles to the pan, heat through, then dress and serve with spring onion."
-    ]
-  },
-  {
-    id: 10, cat: "meal", name: "Slow Cooker Chicken Fajitas",
-    desc: "Shredded chicken fajitas with peppers and spices — set and forget.",
-    servings: "8", prep: "10 min", cook: "3–4 hrs",
-    kcal: "183", protein: "28g", carbs: "12g", fat: "3g",
-    ingredients: [
-      {name: "Chicken breasts", qty: "900g"},
-      {name: "Bell peppers, sliced", qty: "4"},
-      {name: "Red onion, sliced", qty: "1"},
-      {name: "Honey", qty: "2 tbsp"},
-      {name: "Olive oil", qty: "1 tbsp"},
-      {name: "Lime juice", qty: "1"},
-      {name: "Chili powder", qty: "1 tbsp"},
-      {name: "Cumin", qty: "1 tbsp"},
-      {name: "Paprika", qty: "1 tbsp"},
-      {name: "Chopped tomatoes", qty: "1 cup"}
-    ],
-    steps: [
-      "Layer half the peppers and onion in the slow cooker. Add chicken coated with honey, oil, lime, spices and tomatoes. Top with remaining vegetables.",
-      "Cook 4 hours on high. Shred chicken, return to pot and cook 10 more minutes on low.",
-      "Serve in tortillas with preferred toppings."
-    ]
-  },
-  {
-    id: 11, cat: "meal", name: "Creamy Chicken, Mushroom & Tomato Pasta",
-    desc: "Penne with chicken, mushrooms, sundried tomatoes and spinach in a light cream sauce.",
-    servings: "3", prep: "10 min", cook: "20 min",
-    kcal: "385", protein: "35g", carbs: "26g", fat: "14g",
-    ingredients: [
-      {name: "Penne", qty: "150g"},
-      {name: "Chicken breast", qty: "350g"},
-      {name: "Wheat flour", qty: "1 tsp"},
-      {name: "Olive oil", qty: "1 tbsp"},
-      {name: "Dried oregano", qty: "1 tsp"},
-      {name: "Onion, diced", qty: "1 small"},
-      {name: "Garlic, sliced", qty: "2 cloves"},
-      {name: "Sundried tomatoes, chopped", qty: "6"},
-      {name: "Oat cream or cream", qty: "125ml"},
-      {name: "Spinach", qty: "1 bag"},
-      {name: "Mushrooms, sliced", qty: "300g"}
-    ],
-    steps: [
-      "Cook pasta. Season and flour the chicken; cook in oil with oregano, then set aside.",
-      "Sauté onion, garlic and mushrooms until soft; add sundried tomatoes.",
-      "Return chicken, add cream and spinach; simmer until wilted. Toss with pasta and serve."
-    ]
-  },
-  {
-    id: 12, cat: "meal", name: "Simple Chicken Curry With Saffron Rice",
-    desc: "Chicken thighs in a tomato-ginger curry served with saffron basmati.",
-    servings: "4", prep: "15 min", cook: "40 min",
-    kcal: "531", protein: "36g", carbs: "47g", fat: "22g",
-    ingredients: [
-      {name: "Skinless chicken thigh fillets", qty: "8"},
-      {name: "Oil", qty: "1 tbsp"},
-      {name: "Onion, diced", qty: "1 large"},
-      {name: "Ginger, minced", qty: "1 tbsp"},
-      {name: "Garlic, minced", qty: "5 cloves"},
-      {name: "Tomatoes, chopped", qty: "3 large"},
-      {name: "Turmeric", qty: "1½ tsp"},
-      {name: "Basmati rice", qty: "225g"},
-      {name: "Saffron threads", qty: "pinch"},
-      {name: "Vegetable stock", qty: "1¾ cup"}
-    ],
-    steps: [
-      "Brown seasoned thighs; set aside. Sauté onion, garlic and ginger; add tomatoes, water and turmeric.",
-      "Return chicken, cover and simmer 30–45 minutes until tender.",
-      "Steep saffron in boiling water; cook rice with saffron water, stock and seasonings. Serve thighs with sauce and rice."
-    ]
-  },
-  {
-    id: 13, cat: "meal", name: "Quick & Easy Meatballs",
-    desc: "Bacon-wrapped beef meatballs baked until crispy.",
-    servings: "4", prep: "15 min", cook: "20 min",
-    kcal: "309", protein: "36g", carbs: "9g", fat: "14g",
-    ingredients: [
-      {name: "Lean ground beef", qty: "500g"},
-      {name: "Onion, finely diced", qty: "1 small"},
-      {name: "Garlic, minced", qty: "2 cloves"},
-      {name: "Red pepper, diced", qty: "1"},
-      {name: "Egg", qty: "1"},
-      {name: "Buckwheat flour", qty: "30g"},
-      {name: "Coriander, chopped", qty: "¼ cup"},
-      {name: "Oregano", qty: "1 tsp"},
-      {name: "Streaky bacon slices", qty: "12"}
-    ],
-    steps: [
-      "Preheat oven to 200°C. Mix all ingredients except bacon; form 12 meatballs.",
-      "Wrap each in bacon, bake 20 minutes, then broil 4–5 minutes for a crisp finish."
-    ]
-  },
-  {
-    id: 14, cat: "smoothie", name: "Raspberry Protein Smoothie",
-    desc: "Fast post-workout smoothie with raspberries, banana and protein.",
-    servings: "1", prep: "5 min", cook: "0 min",
-    kcal: "331", protein: "29g", carbs: "25g", fat: "12g",
-    ingredients: [
-      {name: "Banana", qty: "½ ripe"},
-      {name: "Frozen raspberries", qty: "125g"},
-      {name: "Almond milk", qty: "240ml"},
-      {name: "Vanilla whey or pea protein", qty: "2 tbsp"},
-      {name: "Almond butter", qty: "1 tbsp"},
-      {name: "Ice cubes", qty: "handful"}
-    ],
-    steps: [
-      "Blend all ingredients until smooth. Serve immediately."
-    ]
-  },
-  {
-    id: 15, cat: "breakfast", name: "Overnight Oats",
-    desc: "Make-ahead oats with chia, protein and Greek yoghurt.",
-    servings: "1", prep: "5 min", cook: "0 min",
-    kcal: "380", protein: "32g", carbs: "40g", fat: "8g",
-    ingredients: [
-      {name: "Rolled oats", qty: "4 tbsp"},
-      {name: "Chia seeds", qty: "1 tbsp"},
-      {name: "Whey protein powder", qty: "1 scoop"},
-      {name: "Greek yoghurt", qty: "2 tbsp"},
-      {name: "Milk", qty: "100ml"},
-      {name: "Raspberries or blueberries", qty: "optional"}
-    ],
-    steps: [
-      "Mix all ingredients in a jar. Refrigerate overnight.",
-      "Eat cold or slightly warmed the next morning."
-    ]
-  },
-  {
-    id: 16, cat: "breakfast", name: "Toast with Avocado & Eggs",
-    desc: "Simple high-quality toast with avocado and eggs your way.",
-    servings: "2", prep: "5 min", cook: "5 min",
-    kcal: "320", protein: "16g", carbs: "22g", fat: "20g",
-    ingredients: [
-      {name: "Quality bread (rye, sourdough, etc.)", qty: "1–2 slices"},
-      {name: "Ripe avocado", qty: "½"},
-      {name: "Free-range eggs", qty: "2–3"},
-      {name: "Butter", qty: "small knob"},
-      {name: "Chili flakes", qty: "optional"}
-    ],
-    steps: [
-      "Toast the bread. Mash avocado onto each slice.",
-      "Cook eggs scrambled, poached or soft-boiled. Serve on the toast with optional chili flakes."
-    ]
-  },
-  {
-    id: 17, cat: "breakfast", name: "Huevos Rancheros",
-    desc: "Eggs baked in a spiced tomato and sausage skillet.",
-    servings: "2", prep: "10 min", cook: "15 min",
-    kcal: "420", protein: "28g", carbs: "18g", fat: "26g",
-    ingredients: [
-      {name: "Coconut oil", qty: "1 tsp"},
-      {name: "Eggs", qty: "3"},
-      {name: "Tinned chopped tomatoes", qty: "1 pot"},
-      {name: "Onion", qty: "½"},
-      {name: "Garlic", qty: "2 cloves"},
-      {name: "Fresh chilli", qty: "1"},
-      {name: "Red pepper", qty: "1"},
-      {name: "Good quality sausages", qty: "4–6"},
-      {name: "Mature cheddar, grated", qty: "handful"}
-    ],
-    steps: [
-      "Fry onion and garlic in oil; add chopped sausage and brown.",
-      "Add pepper, chilli and tomatoes; season with cumin, salt and pepper. Cook 5 minutes.",
-      "Make wells, crack in eggs, simmer 3 minutes then grill until whites are set. Top with cheese."
-    ]
-  }
+const recipes = [
+  {id:1,cat:"breakfast",name:"Spanish Zucchini Tortilla",time:"35 min",servings:2,kcal:377,protein:21,carbs:22,fat:22,ingredients:["1 tbsp olive oil","1 small potato, peeled & chopped","1 small onion, chopped","½ small zucchini, thinly sliced","6 eggs"],steps:["Heat oil in a non-stick pan and sear the potato and onion over medium-high heat for about 4 minutes. Add the zucchini and sauté for another 4 minutes.","In a bowl, whisk eggs and season with salt and pepper. Transfer the vegetables into the bowl and mix well.","Using the same pan, add the egg mixture on low heat. After about 3 minutes, run a spatula around the edges.","After 8-10 minutes, flip the tortilla using a plate. Slide the uncooked part back into the pan.","After another 5-6 minutes the tortilla should be cooked. Remove from heat and serve."]},
+  {id:2,cat:"breakfast",name:"Omelet Wraps",time:"25 min",servings:4,kcal:237,protein:20,carbs:3,fat:15,ingredients:["7 oz (200g) cottage cheese","4 handfuls watercress","1 lemon, peel only","6 eggs","¼ cup (50ml) soy milk","1 tsp mixed herbs","4 tsp coconut oil","3.5 oz (100g) smoked salmon, chopped"],steps:["Place the cottage cheese, watercress and lemon peel in a bowl and puree until smooth.","Beat the eggs with the milk and herbs in a separate bowl.","Heat 1 tsp oil in a medium pan and fry ¼ of the egg mixture for 2 minutes until solid, then flip for 30 seconds.","Repeat for remaining omelets.","Spread the cottage cheese paste over each omelet, top with smoked salmon, roll up and cut in half."]},
+  {id:3,cat:"breakfast",name:"Egg & Turkey Stuffed Peppers",time:"25 min",servings:4,kcal:329,protein:43,carbs:11,fat:12,ingredients:["4 eggs","4 egg whites","2 tbsp almond milk","1 tsp coconut oil","1 small onion, chopped","1 lb (450g) lean ground turkey","2 tsp oregano","1 tsp cumin","2 cups (60g) spinach, chopped","4 red medium bell peppers","½ cup (50g) cheese","parsley to serve"],steps:["Heat oven to 400°F (200°C). Beat eggs, egg whites and milk.","Heat coconut oil, cook onion 3 minutes. Add turkey, oregano, cumin, salt and pepper. Cook 5 minutes. Add spinach until wilted.","Add eggs and scramble for about 3 minutes.","Cut peppers horizontally, remove seeds, stuff with the mixture.","Place in baking dish, sprinkle with cheese and bake 15 minutes. Garnish with parsley."]},
+  {id:4,cat:"breakfast",name:"Smoked Salmon, Feta & Asparagus Omelet",time:"25 min",servings:2,kcal:302,protein:20,carbs:6,fat:21,ingredients:["4 oz (125g) asparagus","1 tsp coconut oil","3 large eggs","5 tbsp (70ml) milk","2 oz (60g) smoked salmon","¼ cup (30g) feta cheese, cubed","4-5 cherry tomatoes, halved","dill to serve"],steps:["Break off hard ends of asparagus, cut softer stalks into ½ cm pieces. Boil 2 minutes, strain.","Whisk eggs with milk, salt and pepper. Add asparagus, salmon and cheese.","Heat oil in a 24cm pan, pour in mixture. Top with cherry tomatoes.","Cover and cook 5 minutes, then transfer to 350°F oven for 6-10 minutes until set.","Sprinkle with dill and black pepper."]},
+  {id:5,cat:"breakfast",name:"High Protein Blueberry Pancakes",time:"15 min",servings:1,kcal:257,protein:36,carbs:18,fat:5,ingredients:["¼ cup liquid egg whites (around 4 eggs)","1 scoop (25g) vanilla whey","½ banana, mashed","almond milk if needed","¼ cup (25g) blueberries","½ tsp coconut oil"],steps:["Whisk egg whites and protein powder.","Stir in mashed banana and blueberries. Thin with almond milk if needed.","Heat coconut oil on low-medium. Pour mixture and cook until bubbles form (~5 min).","Flip carefully and cook another 2-3 minutes.","Serve with your favorite toppings."]},
+  {id:6,cat:"breakfast",name:"Eggs Fried On Tomatoes With Tuna",time:"10 min",servings:1,kcal:307,protein:32,carbs:8,fat:15,ingredients:["1 large tomato","1 tsp coconut oil","2 eggs","3 oz (80g) tuna in brine","pinch of oregano","pinch of chili flakes","parsley to serve"],steps:["Peel and chop the tomato into cubes.","Heat oil, add tomato and fry on high heat 3 minutes.","Create 2 gaps and break eggs into them. Season with salt and pepper.","Arrange tuna on top, sprinkle with oregano and chili.","Fry another 3 minutes until whites are set. Serve with parsley."]},
+  {id:7,cat:"smoothie",name:"Summer Smoothie Protein Bowl",time:"10 min",servings:2,kcal:252,protein:18,carbs:36,fat:5,ingredients:["2 medium peaches, frozen","1 medium banana, frozen","¾ cup (190g) natural yogurt","½ cup (125ml) coconut water","1 scoop (25g) vanilla protein powder"],steps:["Place all ingredients in a high-speed blender and blitz until smooth.","Divide between 2 bowls, add toppings (berries, goji, walnuts, chia) and serve."]},
+  {id:8,cat:"breakfast",name:"Spinach Shakshuka",time:"25 min",servings:2,kcal:321,protein:24,carbs:19,fat:22,ingredients:["1 tbsp coconut oil","1 large onion, chopped","2 garlic cloves, crushed","4 cups (300g) mushrooms, sliced","2 cups (450g) leaf spinach","4 eggs","handful parsley"],steps:["Heat oil, cook onion and garlic 2-3 minutes. Add mushrooms 3-4 minutes. Season.","Add spinach in batches, cover until wilted. Stir and taste for seasoning.","Make 4 wells and break an egg into each. Cover and cook 5-6 minutes until whites set.","Dress with parsley and serve."]},
+  {id:9,cat:"lunch",name:"Salmon Tartar With Avocado & Mango",time:"10 min",servings:1,kcal:282,protein:26,carbs:9,fat:17,ingredients:["1 small salmon fillet (100g), cubed","¼ avocado, cubed","¼ cup (30g) mango, cubed","1 tbsp lime juice","½ tsp honey","chili to taste","handful coriander"],steps:["Cut salmon, avocado and mango into small cubes.","Mix with lime juice, chili and coriander. Season with salt and pepper.","Chill at least 10 minutes. Serve with toast if desired."]},
+  {id:10,cat:"lunch",name:"Tuna Salad Lettuce Wraps",time:"10 min",servings:2,kcal:286,protein:38,carbs:14,fat:9,ingredients:["1¼ cup (280g) tuna in olive oil, drained","1 tbsp tomato puree","1 small red onion, finely chopped","½ Granny Smith apple","8 lettuce leaves"],steps:["Mix tuna with half the oil from the can and tomato puree.","Add finely chopped onion and cubed apple. Mix well.","Spread over 8 lettuce leaves and serve as wraps."]},
+  {id:11,cat:"salad",name:"Chicken, Orange & Walnut Salad",time:"20 min",servings:2,kcal:458,protein:28,carbs:47,fat:20,ingredients:["3 tbsp honey","2 tbsp mustard","1 tbsp olive oil","1 tbsp lemon juice","2 tbsp orange juice","⅓ tsp cinnamon","7 oz (200g) chicken breast","4 handfuls rocket","¼ iceberg lettuce","1 orange","⅓ pomegranate seeds","¼ cup (30g) pecans, roasted"],steps:["Peel orange, cut out pulp, squeeze remaining juice for sauce.","Mix dressing ingredients, season with salt and pepper.","Grill chicken pieces 4 minutes each side, drizzle with dressing while grilling.","Slice chicken. Mix salad leaves, top with orange, chicken, pomegranate and pecans. Drizzle remaining dressing."]},
+  {id:12,cat:"salad",name:"Salmon & Peach Salad",time:"45 min",servings:2,kcal:416,protein:33,carbs:21,fat:25,ingredients:["2 tbsp apple cider vinegar","1 tbsp olive oil","1 tbsp tamari","1 tsp maple syrup","½ tsp ground pepper","2 salmon fillets (5oz/140g each)","1 cob corn, cooked","4 oz (120g) salad leaves","1 peach, sliced","10 cherry tomatoes","1 tbsp balsamic vinegar"],steps:["Mix marinade, coat salmon and refrigerate 20-30 minutes.","Grill corn, cut off kernels.","Bake salmon at 400°F for 8-10 minutes.","Divide salad leaves, top with peach, tomatoes, corn and salmon. Drizzle balsamic."]},
+  {id:13,cat:"salad",name:"Tuna & Broccoli Salad With Honey Vinaigrette",time:"10 min",servings:2,kcal:328,protein:21,carbs:26,fat:14,ingredients:["2 big handfuls salad leaves","3 radishes, sliced","½ cup (120g) tuna in water","2 slices bread","100g broccoli","2 tsp Parmesan","2 tbsp olive oil","3 tbsp lemon juice","1 tsp honey"],steps:["Divide salad leaves, add radish and tuna.","Toast bread, cut into cubes and add.","Boil broccoli 5 minutes, strain and add.","Mix dressing and drizzle over salad. Sprinkle Parmesan."]},
+  {id:14,cat:"salad",name:"Grilled Chicken & Pineapple Salad",time:"23 min",servings:2,kcal:356,protein:27,carbs:34,fat:16,ingredients:["7 oz (200g) chicken breast","4 slices pineapple, canned","2 handfuls salad leaves","⅓ cup (10g) mint leaves","½ small onion, finely chopped","2 tbsp olive oil","1 tsp grated ginger","1 garlic clove","1 lime, juiced","1 tsp honey"],steps:["Mix dressing ingredients in salad bowl, add spinach and mint.","Grill chicken halves with pineapple on top 6-8 minutes, then flip 5 minutes.","Slice chicken. Add to salad with pineapple and onion. Mix and serve."]},
+  {id:15,cat:"salad",name:"Waldorf Chicken Salad",time:"10 min",servings:2,kcal:354,protein:20,carbs:33,fat:16,ingredients:["3.5 oz (100g) cooked chicken, chopped","3 celery stalks, chopped","1 apple, peeled & chopped","¼ cup (40g) raisins","¼ cup (30g) walnuts, chopped","1 tbsp mayonnaise","1 tbsp natural yogurt","1 tbsp lemon juice","3 oz (90g) mixed salad leaves"],steps:["Mix chicken, celery, apple, raisins and walnuts.","Add mayonnaise, yogurt and lemon juice. Season and mix.","Divide salad leaves and top with the mixture."]},
+  {id:16,cat:"salad",name:"Tuna & Quinoa Toss Salad",time:"20 min",servings:2,kcal:399,protein:37,carbs:41,fat:11,ingredients:["1 tbsp olive oil","2 tsp red wine vinegar","1 tsp lemon juice","1 tsp Dijon mustard","1 cup (185g) cooked quinoa","¼ cup (50g) chickpeas","½ cucumber, chopped","1 tbsp crumbled feta","10 cherry tomatoes","2 cans tuna (7oz/200g drained)"],steps:["Cook quinoa according to package.","Combine dressing ingredients.","Combine quinoa and remaining ingredients. Drizzle dressing and toss."]},
+  {id:17,cat:"salad",name:"Salmon & Couscous Salad",time:"22 min",servings:2,kcal:516,protein:36,carbs:29,fat:29,ingredients:["2x 4 oz (115g) salmon pieces","2 tsp olive oil","2 tsp lemon juice","2 cups (150g) iceberg lettuce","1 cup (157g) cooked couscous","½ red onion","10 cherry tomatoes","2 tbsp feta","1 tbsp olive oil","1 tbsp lemon juice","½ tsp Dijon","½ tsp maple syrup"],steps:["Preheat oven to 400°F. Rub salmon with oil, season, pour lemon juice. Roast 10-12 minutes.","Whisk dressing ingredients.","Divide lettuce, top with couscous, onion, tomatoes and feta. Place salmon on top and drizzle dressing."]},
+  {id:18,cat:"breakfast",name:"Post-Workout Potato Pancakes With Cottage Cheese",time:"20 min",servings:1,kcal:502,protein:28,carbs:56,fat:20,ingredients:["⅔ cup (140g) potatoes, grated","¼ cup (50g) zucchini, grated","1 egg","½ shallot, chopped","2 tbsp dill","2 tbsp spelt flour","⅓ cup (50g) cottage cheese","1 tbsp yogurt","2 radishes","1 tbsp dill"],steps:["Grate potatoes and zucchini. Mix with egg, shallot, dill, flour, salt and pepper.","Fry small pancakes 3 minutes then flip 1 minute.","Mix radish, remaining shallot, dill, cheese and yogurt. Season.","Serve pancakes warm with cheese mix on top."]},
+  {id:19,cat:"dinner",name:"Miso Salmon With Zucchini Noodles",time:"35 min",servings:2,kcal:496,protein:29,carbs:27,fat:30,ingredients:["2 salmon fillets (4.5 oz/130g each)","2 tbsp miso paste","2 tbsp honey","¼ cup (60ml) tamari","2 tbsp grated ginger","2 tbsp apple cider vinegar","1 tbsp sesame oil","2 tsp sesame seeds","14 oz (400g) zucchini noodles","6 radishes, sliced","2 tsp sesame oil","2 tsp ginger","1 tsp honey","2 tbsp soy sauce","juice of 1 lime"],steps:["Mix salmon marinade, coat fillets and refrigerate 20 minutes.","Mix zucchini noodles and radish with dressing, refrigerate.","Bake salmon at 350°F for 12 minutes, then broil 2-3 minutes.","Serve salmon with zucchini salad, sprinkle sesame seeds."]},
+  {id:20,cat:"dinner",name:"Moroccan Cod & Bulgur Salad",time:"50 min",servings:2,kcal:447,protein:34,carbs:42,fat:18,ingredients:["10 oz (300g) cod fillets","1 tbsp lemon juice","2 garlic cloves","½ tsp turmeric","½ tsp paprika","½ tsp cumin","pinch saffron","2 tbsp olive oil","scant ½ cup (100g) bulgur","1 tomato, chopped","¼ onion, chopped","15 green olives","3 sprigs parsley"],steps:["Drizzle cod with lemon, rub with garlic and spices, coat with 1 tbsp oil. Marinate 30 minutes.","Cook bulgur 15 minutes. Mix tomato, onion, olives and parsley.","Fry cod 3-4 minutes each side. Heat bulgur in same pan with juices.","Serve cod with bulgur and tomato salad."]},
+  {id:21,cat:"dinner",name:"Turkey & Broccoli Stir Fry",time:"30 min",servings:2,kcal:494,protein:42,carbs:56,fat:16,ingredients:["3.5 oz (100g) black rice noodles","7 oz (200g) turkey fillet, chopped","1 broccoli, florets","1 tbsp olive oil","4 tbsp soy sauce","2 tsp sesame oil","1 tbsp rice vinegar","1 tbsp grated ginger","2 tbsp spring onion","handful coriander"],steps:["Cook noodles, strain and rinse.","Heat oil, fry turkey 3-4 minutes. Add broccoli 1-2 minutes, then ½ cup water and 3 tbsp soy. Cook until water evaporates (~10 min).","Mix remaining soy, sesame oil, vinegar and ginger.","Add noodles, heat 2-3 minutes, pour sauce, mix. Serve with spring onion and coriander."]},
+  {id:22,cat:"dinner",name:"Baked Salmon With Zoodles & Quinoa",time:"1h 25min",servings:2,kcal:487,protein:38,carbs:19,fat:28,ingredients:["2 salmon fillets (4.4 oz/125g each)","3.5 oz (100g) cooked quinoa","1 zucchini","½ tbsp olive oil","1 garlic clove","2.5 oz (70g) sundried tomatoes","2 tbsp tamari","½ tbsp olive oil","½ tsp sweet paprika","½ tsp hot paprika","1 tbsp rice vinegar","1 tsp honey","1 tbsp black sesame seeds"],steps:["Mix marinade, cover salmon 1 hour.","Cook quinoa, spiralize zucchini.","Heat oil, fry garlic, add zoodles 3-4 minutes, then tomatoes.","Bake salmon at 480°F for 7 minutes.","Serve quinoa and zoodles with salmon on top."]},
+  {id:23,cat:"dinner",name:"Chicken Thighs With Hoisin Rice",time:"55 min",servings:8,kcal:336,protein:29,carbs:16,fat:15,ingredients:["2 tbsp coconut oil","8 skinless chicken thighs","scant 1 cup (200g) jasmine rice","4 spring onions","4 garlic cloves","½ cup (200ml) white wine","2 cups (500ml) chicken stock","4 tbsp dried cranberries","3 tbsp soy sauce","2 tbsp rice vinegar","1 tbsp peanut butter","1 tsp chili flakes","1 tsp honey","1 tsp sesame oil"],steps:["Preheat oven to 375°F. Season and fry chicken thighs 5 minutes each side.","Sauté garlic and spring onions, add rice, then wine. Add sauce ingredients, stock and cranberries.","Transfer rice to oven dish, place chicken on top. Bake 30 minutes.","Serve or store in fridge 2-3 days."]},
+  {id:24,cat:"dinner",name:"Chinese Pork Stir-Fry With Pineapple",time:"30 min",servings:4,kcal:303,protein:28,carbs:22,fat:11,ingredients:["14 oz (400g) pork tenderloin","1 tbsp potato starch","scant ½ cup (100g) white rice","⅔ cup (135ml) pineapple chunks","1 red bell pepper","½ onion","2 garlic cloves","½ chili","1-inch ginger","2 tbsp coconut oil","½ cup (180ml) pineapple juice","5 tbsp soy sauce","3 tbsp rice vinegar"],steps:["Slice pork thin, season, coat with starch. Cook rice.","Stir-fry vegetables and pineapple 5 minutes, set aside.","Fry pork 3 minutes. Return vegetables, add sauce, cook 2 minutes until thick.","Serve with rice and spring onions."]},
+  {id:25,cat:"dinner",name:"Slow Cooker Chicken Fajitas",time:"4h 10min",servings:8,kcal:183,protein:28,carbs:12,fat:3,ingredients:["2 lbs (900g) chicken breasts","4 bell peppers, sliced","1 red onion, sliced","2 tbsp honey","1 tbsp olive oil","1 lime, juiced","1 tbsp chili powder","1 tbsp cumin","1 tbsp paprika","1 tsp salt","1 tsp onion powder","1 tsp garlic powder","1 cup chopped tomatoes"],steps:["Place half peppers and onion in slow cooker. Layer chicken, coat with honey, oil, lime, seasonings and tomatoes.","Add remaining peppers and onion. Cook 4 hours on high.","Shred chicken, return and cook 10 more minutes on low.","Serve with tortillas, cream, guacamole if desired."]},
+  {id:26,cat:"dinner",name:"Creamy Chicken, Mushroom & Tomato Pasta",time:"30 min",servings:3,kcal:385,protein:35,carbs:26,fat:14,ingredients:["1½ cup (150g) penne","12 oz (350g) chicken breast","1 tsp wheat flour","1 tbsp olive oil","1 tsp dried oregano","1 small onion","2 garlic cloves","6 sundried tomatoes","½ cup (125ml) plant cream","1 bag spinach","4 cups (300g) mushrooms"],steps:["Cook pasta. Chop chicken, season, dredge with flour.","Cook chicken with oregano, set aside.","Sauté onion, garlic, mushrooms 5-7 minutes, add tomatoes.","Return chicken, add cream and spinach. Bring to boil. Add pasta and stir."]},
+  {id:27,cat:"dinner",name:"Cajun Beef & Veg Rice",time:"35 min",servings:3,kcal:503,protein:40,carbs:55,fat:13,ingredients:["1 tbsp coconut oil","3 large carrots, sliced","2 peppers, sliced","4 spring onions","1 lb (500g) 5% fat beef mince","2 tsp Cajun seasoning","1 tbsp tomato purée","1 lb (500g) cooked rice"],steps:["Heat oil, sauté carrots, peppers and white spring onion parts 10 minutes.","Add beef, cook 10 minutes until browned.","Add Cajun seasoning and tomato purée. Add cooked rice and 4 tbsp water.","Cook 3-4 minutes. Sprinkle green spring onion parts."]},
+  {id:28,cat:"dinner",name:"Chinese Style Shrimps & Veg",time:"30 min",servings:3,kcal:436,protein:22,carbs:63,fat:11,ingredients:["1 cup (185g) rice","2 tbsp olive oil","1 carrot","1 pepper","1 small onion","3 garlic cloves","1 small zucchini","1½ tbsp grated ginger","pinch chili flakes","9 oz (250g) shrimps","2 tbsp soy sauce","1 tsp potato flour","⅔ cup (160ml) water","1 tbsp coconut palm sugar"],steps:["Cook rice. Sauté carrot, pepper, garlic 3 minutes, add zucchini 5 minutes.","Add ginger, salt and chili. Push veg aside, cook shrimps 1 minute.","Mix soy, potato flour, water and sugar. Pour in, boil 1 minute. Serve with rice."]},
+  {id:29,cat:"dinner",name:"Zesty Turkey Meatballs With Couscous Salad",time:"50 min",servings:4,kcal:429,protein:42,carbs:52,fat:8,ingredients:["2 tbsp coconut oil","1 onion","¼ tsp chili flakes","2 garlic cloves","1 lb (500g) turkey thigh mince","2 handfuls mint","1 lemon, zested & juiced","7 oz (200g) 0% Greek yogurt","7 oz (200g) couscous","1 cup (250ml) vegetable stock","7 oz (200g) frozen peas","8 radishes"],steps:["Sauté onion, chili and garlic. Cool, mix with turkey, half mint, half zest and 1 tbsp dry couscous. Shape 16 meatballs, freeze 15 min.","Prepare couscous with stock. Blanche peas. Mix yogurt sauce with remaining mint and half lemon juice.","Fluff couscous, add remaining lemon, peas and radishes.","Fry meatballs 10 minutes, then cover 5 minutes. Serve with salad and yogurt."]},
+  {id:30,cat:"dinner",name:"Honey & Lime Glazed Salmon With Pineapple Rice",time:"1h 40min",servings:4,kcal:643,protein:35,carbs:68,fat:24,ingredients:["1.3 lb (600g) salmon, 4 fillets","3 tbsp honey","3 tbsp lime juice","3 tbsp soy sauce","1 tbsp olive oil","3 tbsp grated ginger","2 garlic cloves","⅔ cup (150g) rice","¾ cup (200g) sweetcorn","1¼ cups (250g) pineapple","1⅓ cup (200g) cucumber","1 lime, juiced","2 tbsp honey","½ cup coriander"],steps:["Mix marinade, coat salmon, marinate 1 hour.","Cook rice, cool. Mix with sweetcorn, pineapple, cucumber, lime, honey and coriander.","Bake salmon at 410°F for 18 minutes. Serve with pineapple rice."]},
+  {id:31,cat:"dinner",name:"Simple Chicken Curry With Saffron Rice",time:"50 min",servings:4,kcal:531,protein:36,carbs:47,fat:22,ingredients:["8 skinless chicken thigh fillets","1 tbsp oil","1 large onion","1 tbsp minced ginger","5 garlic cloves","½ tsp black pepper","3 large tomatoes","1½ tsp turmeric","¼ cup boiling water","pinch saffron","1 cup (225g) basmati rice","1 tsp coconut oil","½ tsp onion powder","¼ tsp salt","1¾ cup vegetable stock"],steps:["Season and fry chicken thighs until golden. Set aside.","Sauté onion, garlic and ginger, add tomatoes, water, turmeric. Return chicken, cover and cook 30-45 minutes.","Brew saffron in boiling water 5 minutes. Cook rice with saffron water and other ingredients 15 minutes. Rest 10 minutes.","Serve 2 thighs with sauce and saffron rice."]},
+  {id:32,cat:"dinner",name:"One Pot Turkey Chili With Rice",time:"35 min",servings:4,kcal:295,protein:31,carbs:21,fat:9,ingredients:["10 oz (300g) minced turkey","½ cup (115g) rice","1 medium onion","2 garlic cloves","1 tbsp oil","½ can chopped tomatoes","1 red bell pepper","1 cup (250ml) vegetable broth","½ cup (60g) red kidney beans","½ cup (85g) sweet corn","½ cup (30g) grated cheese (optional)","1 tsp oregano","1 tsp cumin","1 tsp sweet paprika","½ tsp hot paprika"],steps:["Sauté onion and garlic 3-4 minutes. Add turkey 5-6 minutes.","Add spices, uncooked rice, peppers, beans, corn, tomatoes and broth. Simmer covered 17-20 minutes.","Add cheese if using, cover 2 minutes until melted."]},
+  {id:33,cat:"dinner",name:"Baked Salmon Tray With Rice & Tomatoes",time:"35 min",servings:4,kcal:476,protein:31,carbs:44,fat:19,ingredients:["14 oz (400g) salmon fillet","1 tsp honey","2 tbsp soy sauce","2 tbsp olive oil","4 lemon slices + 2 tbsp juice","⅔ cup (200g) jasmine rice","1 cup (150g) cherry tomatoes","handful basil","4 tbsp 0% natural yogurt","2 tsp paprika","⅓ tsp curry","1 tsp oregano","pinch chili flakes"],steps:["Cut salmon into 4 pieces. Season with spices, honey, soy, oil and lemon juice.","Preheat oven 400°F. Cook rice, spread in baking dish.","Place salmon on rice, add tomatoes and basil. Top with lemon slices and remaining marinade. Bake 15 minutes.","Serve with a dollop of yogurt."]},
+  {id:34,cat:"dinner",name:"Mexican Fried Rice",time:"35 min",servings:4,kcal:360,protein:24,carbs:32,fat:16,ingredients:["7 oz (300g) chicken breast","2 garlic cloves","scant ½ cup (100g) rice","2 tbsp coconut oil","½ red onion","1 red pepper","⅔ cup (100g) sweetcorn","½ cup (100g) red kidney beans","1 tomato","1 avocado","1 tbsp lime","½ chili","handful coriander","1 tsp oregano","1 tsp paprika","1 tsp cumin"],steps:["Chop chicken, season with spices and garlic. Cook rice and cool.","Fry chicken 3-4 minutes, add onion and pepper 3-4 minutes.","Add sweetcorn, beans and rice. Cook 2 minutes. Add tomato.","Serve topped with avocado, lime, chili and coriander."]},
+  {id:35,cat:"dinner",name:"Beef & Green Beans Pasta In Soy Sauce",time:"25 min",servings:2,kcal:491,protein:44,carbs:53,fat:12,ingredients:["4 oz (120g) whole-wheat pasta","10 oz (300g) beef steak","4 spring onions","2 garlic cloves","1 tbsp coconut oil","2 tbsp soy sauce","⅓ cup (80ml) beef stock","100g green beans, frozen"],steps:["Cook pasta. Slice beef thin.","Heat oil, cook beef 3 minutes, drizzle soy, set aside.","Cook garlic and spring onions 3 minutes.","Return beef, add stock and beans 2-3 minutes. Add pasta and stir 2 minutes."]},
+  {id:36,cat:"dinner",name:"Chicken & Mango Stir Fry",time:"20 min",servings:4,kcal:308,protein:29,carbs:31,fat:9,ingredients:["1 lb (450g) chicken breasts, strips","1 tbsp buckwheat flour","1 mango","1 red bell pepper","1 red onion","2 garlic cloves","1 small chili","2 tbsp grated ginger","2 tbsp coconut oil","3 tbsp rice vinegar","3 tbsp water","5 tbsp soy sauce","2 tbsp honey"],steps:["Coat chicken strips with flour. Prepare mango, pepper, onion, chili and ginger.","Mix sauce ingredients.","Stir-fry vegetables and mango 5 minutes, set aside. Fry chicken 3 minutes.","Return everything, add sauce, cook 2 minutes until thick. Serve with rice."]},
+  {id:37,cat:"dinner",name:"Salmon Teriyaki With Green Beans & Sweetcorn Rice",time:"1h 25min",servings:4,kcal:507,protein:45,carbs:40,fat:19,ingredients:["4 salmon fillets (5 oz/150g each)","5 oz (150g) green beans","1 cup (150g) sweetcorn","3.5 oz (100g) brown rice","2 tbsp sesame seeds","1 tbsp sesame oil","8 tbsp soy sauce","3 tbsp maple syrup","1 tbsp lime juice","4 tbsp grated ginger","2 garlic cloves"],steps:["Mix marinade, coat salmon 1 hour.","Cook rice, add green beans last 4 minutes, then mix in sweetcorn.","Bake salmon at 450°F 8-10 minutes, sprinkle sesame last 3 minutes.","Reduce marinade until thick, mix in sesame oil. Serve over rice."]},
+  {id:38,cat:"dinner",name:"Chicken Orange Stir Fry",time:"35 min",servings:4,kcal:397,protein:34,carbs:53,fat:7,ingredients:["1 orange, juice","⅓ cup (100g) low sugar marmalade","¼ cup (60ml) soy sauce","1 tsp sriracha","1 tbsp buckwheat flour","1 tbsp coconut oil","1 lb (450g) chicken breast","1 tbsp minced garlic","3 sprigs green onion","1 cup (150g) snap peas","1 red bell pepper","3 cups (450g) cooked brown rice","⅓ cup (25g) grated carrot","1 tbsp sesame seeds"],steps:["Mix sauce ingredients.","Cook chicken 4-5 minutes, set aside.","Cook garlic and green onion 1 minute, add peas and pepper 3-4 minutes.","Add rice, chicken, carrots and sauce. Stir well. Garnish with sesame."]},
+  {id:39,cat:"dinner",name:"Pesto Pasta With Tuna & Almonds",time:"20 min",servings:4,kcal:512,protein:24,carbs:69,fat:16,ingredients:["10.5 oz (300g) gluten-free fusilli","14 oz (400g) green beans","8.4 oz (240g) tuna in water","1 oz (30g) roasted almonds","4.5 oz (130g) green pesto"],steps:["Cook pasta. Halve and boil green beans 5 minutes.","Drain tuna, chop almonds.","Mix pasta with pesto and beans. Top with tuna and almonds. Season with pepper."]},
+  {id:40,cat:"dinner",name:"Sweet & Sour Pork Stir-Fry",time:"25 min",servings:4,kcal:446,protein:22,carbs:52,fat:16,ingredients:["¾ cup (200g) basmati rice","10 oz (300g) pork loin","2 garlic cloves","4 spring onions","1 tbsp coconut oil","3 tbsp ginger syrup","1 lime, juiced","1½ cup (200g) sugar snap peas","1¼ cup (250g) cherry tomatoes","1¼ cup (250g) pineapple"],steps:["Cook rice. Slice pork, chop garlic and spring onions.","Stir-fry pork with garlic, ginger syrup and lime 2 minutes. Add sugar snaps 4 minutes.","Add tomatoes and pineapple 4 minutes. Toss in spring onions. Serve with rice."]},
+  {id:41,cat:"dinner",name:"Pepper Steak",time:"25 min",servings:2,kcal:380,protein:35,carbs:18,fat:18,ingredients:["10 oz (300g) beef steak","1 tbsp coconut oil","2 bell peppers, sliced","1 onion, sliced","2 garlic cloves","3 tbsp soy sauce","1 tbsp oyster sauce","1 tsp cornstarch","½ cup beef stock"],steps:["Slice steak thin. Heat oil, sear beef 2 minutes, set aside.","Stir-fry peppers, onion and garlic 4 minutes.","Mix soy, oyster, cornstarch and stock. Add to pan with beef. Cook until sauce thickens."]},
+  {id:42,cat:"dinner",name:"Quick & Easy Meatballs",time:"30 min",servings:4,kcal:320,protein:28,carbs:12,fat:18,ingredients:["1 lb (450g) lean ground beef","1 egg","2 tbsp breadcrumbs","1 onion, grated","2 garlic cloves","1 tsp oregano","1 tsp paprika","1 tbsp olive oil","1 cup tomato passata"],steps:["Mix beef, egg, breadcrumbs, onion, garlic and spices. Shape into meatballs.","Heat oil, brown meatballs all sides.","Add passata, cover and simmer 15 minutes until cooked through."]},
+  {id:43,cat:"dinner",name:"Quick Beef Chow Mein",time:"20 min",servings:2,kcal:420,protein:32,carbs:45,fat:12,ingredients:["6 oz (170g) egg noodles","8 oz (225g) beef strips","1 tbsp coconut oil","2 cups mixed stir-fry vegetables","3 tbsp soy sauce","1 tbsp oyster sauce","1 tsp sesame oil","2 spring onions"],steps:["Cook noodles. Heat oil, stir-fry beef 3 minutes.","Add vegetables 3-4 minutes.","Add noodles, soy, oyster and sesame oil. Toss 2 minutes. Top with spring onions."]},
+  {id:44,cat:"dinner",name:"Simple Chili & Sweet Potato Chips",time:"40 min",servings:4,kcal:380,protein:30,carbs:35,fat:12,ingredients:["1 lb (450g) lean ground beef","1 onion","2 garlic cloves","1 can chopped tomatoes","1 can kidney beans","2 tsp chili powder","1 tsp cumin","2 large sweet potatoes","1 tbsp olive oil"],steps:["Preheat oven 400°F. Cut sweet potatoes into chips, toss with oil, bake 25-30 minutes.","Cook onion and garlic, add beef until browned.","Add tomatoes, beans and spices. Simmer 15 minutes. Serve with sweet potato chips."]},
+  {id:45,cat:"snack",name:"Cherry Sorbet",time:"1h",servings:4,kcal:90,protein:1,carbs:22,fat:0,ingredients:["2 cups frozen cherries","2 tbsp honey or maple syrup","1 tbsp lemon juice","handful ice"],steps:["Blend all ingredients until smooth.","Freeze 45-60 minutes, stirring once.","Scoop into glasses and serve."]},
+  {id:46,cat:"smoothie",name:"Protein Fruit Bowls",time:"5 min",servings:2,kcal:280,protein:25,carbs:30,fat:6,ingredients:["1 cup frozen mixed berries","1 banana","1 scoop vanilla protein","½ cup Greek yogurt","splash almond milk"],steps:["Blend all ingredients until thick and creamy.","Divide into bowls and add toppings of choice."]},
+  {id:47,cat:"smoothie",name:"Matcha Chia Pudding",time:"10 min + chill",servings:2,kcal:220,protein:18,carbs:20,fat:8,ingredients:["2 tbsp chia seeds","1 cup almond milk","1 scoop vanilla protein","1 tsp matcha powder","1 tsp honey"],steps:["Mix all ingredients well.","Refrigerate at least 2 hours or overnight.","Stir and serve with berries if desired."]},
+  {id:48,cat:"smoothie",name:"Raspberry Protein Smoothie",time:"5 min",servings:1,kcal:250,protein:30,carbs:22,fat:5,ingredients:["1 cup frozen raspberries","1 scoop vanilla protein","1 cup almond milk","1 tbsp almond butter","handful ice"],steps:["Place all ingredients in a blender and blitz until smooth. Serve immediately."]},
+  {id:49,cat:"smoothie",name:"Green Glow Protein Smoothie",time:"5 min",servings:1,kcal:230,protein:28,carbs:18,fat:4,ingredients:["1 handful spinach","½ frozen banana","1 scoop vanilla protein","1 cup coconut water","½ green apple"],steps:["Blend all ingredients until smooth. Serve immediately."]},
+  {id:50,cat:"smoothie",name:"Cinnamon Roll Protein Smoothie",time:"5 min",servings:1,kcal:260,protein:32,carbs:24,fat:5,ingredients:["1 scoop vanilla protein","1 frozen banana","1 tsp cinnamon","1 cup almond milk","1 cup ice","½ tsp vanilla extract"],steps:["Place all ingredients in a blender and pulse until smooth. Serve."]}
 ];
 
-const CATS = {
-  breakfast: "Breakfast",
-  meal: "Meals",
-  salad: "Salads",
-  snack: "Snacks",
-  smoothie: "Smoothies"
-};
+let activeCat = 'all';
+let showFavsOnly = false;
+let favorites = JSON.parse(localStorage.getItem('ca_favs') || '[]');
 
-let activeCat = "all";
-let searchTerm = "";
-let showFav = false;
-let favorites = new Set(JSON.parse(localStorage.getItem("ca_favs_v2") || "[]"));
-
-function saveFavs() {
-  localStorage.setItem("ca_favs_v2", JSON.stringify([...favorites]));
-  const el = document.getElementById("favCount");
-  if (favorites.size) {
-    el.style.display = "inline-flex";
-    el.textContent = favorites.size;
-  } else el.style.display = "none";
+function updateFavCount() {
+  const el = document.getElementById('favCount');
+  el.textContent = favorites.length;
+  el.classList.toggle('show', favorites.length > 0);
 }
 
-function esc(s) {
-  const d = document.createElement("div");
-  d.textContent = s || "";
-  return d.innerHTML;
+function toggleFav(id, e) {
+  if (e) e.stopPropagation();
+  const idx = favorites.indexOf(id);
+  if (idx > -1) favorites.splice(idx, 1);
+  else favorites.push(id);
+  localStorage.setItem('ca_favs', JSON.stringify(favorites));
+  updateFavCount();
+  render();
+  if (document.getElementById('modal').classList.contains('open')) {
+    openModal(id);
+  }
 }
 
-function getFiltered() {
-  const t = searchTerm.toLowerCase().trim();
-  return RECIPES.filter(r => {
-    if (showFav && !favorites.has(r.id)) return false;
-    if (activeCat !== "all" && r.cat !== activeCat) return false;
-    if (!t) return true;
-    return (r.name + " " + r.desc).toLowerCase().includes(t);
+function toggleFavView() {
+  showFavsOnly = !showFavsOnly;
+  document.getElementById('favToggle').classList.toggle('active', showFavsOnly);
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  let list = recipes.filter(r => {
+    if (showFavsOnly && !favorites.includes(r.id)) return false;
+    if (activeCat !== 'all' && r.cat !== activeCat) return false;
+    if (q && !r.name.toLowerCase().includes(q) && !r.ingredients.some(i => i.toLowerCase().includes(q))) return false;
+    return true;
   });
-}
 
-function renderGrid() {
-  const list = getFiltered();
-  document.getElementById("resultsCount").textContent = list.length + " recipe" + (list.length !== 1 ? "s" : "");
-  document.getElementById("statCount").textContent = RECIPES.length;
-  const grid = document.getElementById("grid");
+  const grid = document.getElementById('grid');
   if (!list.length) {
-    grid.innerHTML = '<div class="empty"><div class="empty-title">No recipes found</div><div>Try a different search or clear filters.</div></div>';
+    grid.innerHTML = `<div class="empty"><h3>No recipes found</h3><p>Try a different search or filter</p></div>`;
     return;
   }
-  grid.innerHTML = list.map(r => {
-    const fav = favorites.has(r.id);
-    return `<article class="card" role="listitem" data-id="${r.id}" tabindex="0">
-      <div class="card-top"></div>
-      <button class="card-fav ${fav ? "on" : ""}" data-fav="${r.id}" type="button" aria-label="Favorite" onclick="event.stopPropagation();toggleFav(${r.id})">${fav ? "Saved" : "+"}</button>
-      <div class="card-body">
-        <div class="card-cat">${CATS[r.cat] || r.cat}</div>
-        <div class="card-name">${esc(r.name)}</div>
-        <div class="card-desc">${esc(r.desc)}</div>
-        <div class="card-meta">
-          ${r.prep ? `<span>${esc(r.prep)} prep</span>` : ""}
-          ${r.cook ? `<span>${esc(r.cook)} cook</span>` : ""}
-          ${r.servings ? `<span>${esc(r.servings)} serv</span>` : ""}
-        </div>
-        <div class="card-macros">
-          <div class="cm"><div class="cm-v kcal">${esc(r.kcal)}</div><div class="cm-l">kcal</div></div>
-          <div class="cm"><div class="cm-v prot">${esc(r.protein)}</div><div class="cm-l">protein</div></div>
-          <div class="cm"><div class="cm-v">${esc(r.carbs)}</div><div class="cm-l">carbs</div></div>
-          <div class="cm"><div class="cm-v">${esc(r.fat)}</div><div class="cm-l">fat</div></div>
-        </div>
+
+  grid.innerHTML = list.map(r => `
+    <article class="card" onclick="openModal(${r.id})">
+      <div class="card-cat">${r.cat}</div>
+      <h2 class="card-title">${r.name}</h2>
+      <div class="card-macros">
+        <span class="macro"><strong>${r.kcal}</strong> kcal</span>
+        <span class="macro"><strong>${r.protein}g</strong> protein</span>
+        <span class="macro"><strong>${r.carbs}g</strong> carbs</span>
+        <span class="macro"><strong>${r.fat}g</strong> fat</span>
       </div>
-    </article>`;
-  }).join("");
-  grid.querySelectorAll(".card").forEach(c => {
-    c.addEventListener("click", () => openRecipe(+c.dataset.id));
-    c.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openRecipe(+c.dataset.id); }
-    });
-  });
+      <div class="card-footer">
+        <span class="card-time">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          ${r.time}
+        </span>
+        <button class="card-fav ${favorites.includes(r.id) ? 'active' : ''}" onclick="toggleFav(${r.id}, event)" aria-label="Favorite">
+          <svg viewBox="0 0 24 24" fill="${favorites.includes(r.id) ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        </button>
+      </div>
+    </article>
+  `).join('');
 }
 
-function toggleFav(id) {
-  if (favorites.has(id)) favorites.delete(id);
-  else favorites.add(id);
-  saveFavs();
-  renderGrid();
-  const btn = document.querySelector(".modal-actions .btn-fav");
-  if (btn) {
-    btn.classList.toggle("on", favorites.has(id));
-    btn.textContent = favorites.has(id) ? "Saved" : "Save";
-  }
-}
-
-function openRecipe(id) {
-  const r = RECIPES.find(x => x.id === id);
+function openModal(id) {
+  const r = recipes.find(x => x.id === id);
   if (!r) return;
-  const fav = favorites.has(id);
-  document.getElementById("modalContent").innerHTML = `
-    <div class="modal-cat">${CATS[r.cat] || r.cat}</div>
-    <h2 id="modalTitle">${esc(r.name)}</h2>
-    <p class="modal-desc">${esc(r.desc)}</p>
-    <div class="modal-tags">
-      ${r.prep ? `<span class="modal-tag">${esc(r.prep)} prep</span>` : ""}
-      ${r.cook ? `<span class="modal-tag">${esc(r.cook)} cook</span>` : ""}
-      ${r.servings ? `<span class="modal-tag">${esc(r.servings)} servings</span>` : ""}
+  const isFav = favorites.includes(r.id);
+  document.getElementById('modalContent').innerHTML = `
+    <button class="modal-close" onclick="closeModal()" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal-cat">${r.cat}</div>
+    <h2 class="modal-title">${r.name}</h2>
+    <div class="modal-meta">
+      <span class="meta-item"><strong>${r.time}</strong> total</span>
+      <span class="meta-item"><strong>${r.servings}</strong> servings</span>
     </div>
     <div class="modal-macros">
-      <div class="mm"><div class="mm-v kcal">${esc(r.kcal)}</div><div class="mm-l">kcal</div></div>
-      <div class="mm"><div class="mm-v prot">${esc(r.protein)}</div><div class="mm-l">protein</div></div>
-      <div class="mm"><div class="mm-v carb">${esc(r.carbs)}</div><div class="mm-l">carbs</div></div>
-      <div class="mm"><div class="mm-v fat">${esc(r.fat)}</div><div class="mm-l">fat</div></div>
+      <div class="macro-box"><strong>${r.kcal}</strong><span>kcal</span></div>
+      <div class="macro-box"><strong>${r.protein}g</strong><span>protein</span></div>
+      <div class="macro-box"><strong>${r.carbs}g</strong><span>carbs</span></div>
+      <div class="macro-box"><strong>${r.fat}g</strong><span>fat</span></div>
     </div>
-    <div class="sec-title">Ingredients</div>
-    ${r.ingredients.map((ing, i) => `
-      <label class="ing-row">
-        <input type="checkbox" onchange="this.closest('.ing-row').classList.toggle('done', this.checked)">
-        <span class="ing-name">${esc(ing.name)}</span>
-        <span class="ing-qty">${esc(ing.qty)}</span>
-      </label>`).join("")}
-    <div class="sec-title" style="margin-top:24px">Method</div>
-    ${r.steps.map((s, i) => `
-      <div class="step"><div class="step-n">${i + 1}</div><div class="step-t">${esc(s)}</div></div>`).join("")}
+    <h3 class="section-title">Ingredients</h3>
+    <ul class="ingredients">${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h3 class="section-title">Instructions</h3>
+    <ol class="steps">${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
     <div class="modal-actions">
-      <button class="btn-fav ${fav ? "on" : ""}" type="button" onclick="toggleFav(${id})">${fav ? "Saved" : "Save"}</button>
-      <button type="button" onclick="copyRecipe(${id})">Copy</button>
-      <button type="button" onclick="window.print()">Print</button>
-    </div>`;
-  document.getElementById("overlay").classList.add("open");
-  document.body.style.overflow = "hidden";
-  history.pushState({ recipe: id }, "", "#r" + id);
+      <button class="btn btn-ghost ${isFav ? 'active' : ''}" onclick="toggleFav(${r.id})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        ${isFav ? 'Saved' : 'Save'}
+      </button>
+      <button class="btn btn-primary" onclick="window.print()">Print Recipe</button>
+    </div>
+  `;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
-  document.getElementById("overlay").classList.remove("open");
-  document.body.style.overflow = "";
-  if (location.hash.startsWith("#r")) history.pushState(null, "", location.pathname);
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
 }
 
-function copyRecipe(id) {
-  const r = RECIPES.find(x => x.id === id);
-  if (!r) return;
-  const text = [
-    r.name, r.desc, "",
-    `Calories: ${r.kcal} | Protein: ${r.protein} | Carbs: ${r.carbs} | Fat: ${r.fat}`,
-    "", "Ingredients:",
-    ...r.ingredients.map(i => `• ${i.name} — ${i.qty}`),
-    "", "Method:",
-    ...r.steps.map((s, i) => `${i + 1}. ${s}`)
-  ].join("\\n");
-  navigator.clipboard.writeText(text).then(() => {
-    const b = event.target;
-    const o = b.textContent;
-    b.textContent = "Copied";
-    setTimeout(() => b.textContent = o, 1400);
-  }).catch(() => {});
-}
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target.id === 'modal') closeModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
 
-function renderFeatured() {
-  const f = RECIPES.find(r => r.id === 10) || RECIPES[0];
-  document.getElementById("featuredBox").innerHTML = `
-    <div class="featured-label">Featured</div>
-    <div class="featured-cat">${CATS[f.cat]}</div>
-    <h3>${esc(f.name)}</h3>
-    <p>${esc(f.desc)}</p>
-    <div class="featured-macros">
-      <div class="f-macro"><div class="f-macro-v">${esc(f.kcal)}</div><div class="f-macro-l">kcal</div></div>
-      <div class="f-macro"><div class="f-macro-v">${esc(f.protein)}</div><div class="f-macro-l">protein</div></div>
-    </div>
-    <button class="btn-primary" style="width:100%" type="button" onclick="openRecipe(${f.id})">View recipe</button>`;
-}
+document.getElementById('search').addEventListener('input', render);
 
-document.getElementById("searchInput").addEventListener("input", e => {
-  searchTerm = e.target.value;
-  updateClear();
-  renderGrid();
+document.getElementById('filters').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeCat = btn.dataset.cat;
+  render();
 });
-document.getElementById("filters").addEventListener("click", e => {
-  const chip = e.target.closest(".chip");
-  if (!chip) return;
-  document.querySelectorAll(".chip").forEach(c => c.classList.remove("on"));
-  chip.classList.add("on");
-  activeCat = chip.dataset.cat;
-  showFav = false;
-  document.getElementById("favBtn").classList.remove("active");
-  updateClear();
-  renderGrid();
-});
-document.getElementById("clearBtn").addEventListener("click", () => {
-  activeCat = "all";
-  searchTerm = "";
-  showFav = false;
-  document.getElementById("searchInput").value = "";
-  document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c.dataset.cat === "all"));
-  document.getElementById("favBtn").classList.remove("active");
-  updateClear();
-  renderGrid();
-});
-document.getElementById("favBtn").addEventListener("click", () => {
-  showFav = !showFav;
-  document.getElementById("favBtn").classList.toggle("active", showFav);
-  if (showFav) {
-    activeCat = "all";
-    document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c.dataset.cat === "all"));
-  }
-  updateClear();
-  renderGrid();
-});
-function updateClear() {
-  document.getElementById("clearBtn").style.display =
-    (activeCat !== "all" || searchTerm || showFav) ? "inline" : "none";
-}
-document.getElementById("exploreBtn").addEventListener("click", () =>
-  document.getElementById("library").scrollIntoView({ behavior: "smooth" }));
-document.getElementById("focusSearch").addEventListener("click", () =>
-  document.getElementById("searchInput").focus());
-document.getElementById("modalClose").addEventListener("click", closeModal);
-document.getElementById("overlay").addEventListener("click", e => {
-  if (e.target === document.getElementById("overlay")) closeModal();
-});
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
-window.addEventListener("popstate", () => {
-  if (!location.hash.startsWith("#r")) closeModal();
-  else openRecipe(+location.hash.slice(2));
-});
-const btt = document.getElementById("btt");
-window.addEventListener("scroll", () => btt.classList.toggle("show", scrollY > 400), { passive: true });
-btt.addEventListener("click", () => scrollTo({ top: 0, behavior: "smooth" }));
-if (location.hash.startsWith("#r")) {
-  const id = +location.hash.slice(2);
-  if (id) setTimeout(() => openRecipe(id), 80);
-}
 
-saveFavs();
-renderFeatured();
-renderGrid();
+document.getElementById('recipeCount').textContent = recipes.length;
+updateFavCount();
+render();
 </script>
 </body>
 </html>
