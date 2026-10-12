@@ -6,13 +6,13 @@
 <title>كتاب الوصفات | Coach Anis</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nutrition Cookbook | كتاب الوصفات الغذائية">
-<meta property="og:description" content="50 وصفة رياضية عملية مع السعرات والبروتين والكربوهيدرات — حصرية للمشتركين">
+<meta property="og:description" content="50 وصفة رياضية عملية مع السعرات والبروتين والكربوهيدرات والدهون">
 <meta property="og:image" content="https://coach-anis.github.io/recipe-book/preview.png">
 <meta property="og:url" content="https://coach-anis.github.io/recipe-book/">
 <meta property="og:locale" content="ar_AR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nutrition Cookbook | كتاب الوصفات الغذائية">
-<meta name="twitter:description" content="50 وصفة رياضية عملية — حصرية للمشتركين">
+<meta name="twitter:description" content="50 وصفة رياضية عملية مع الماكرو الكامل">
 <meta name="twitter:image" content="https://coach-anis.github.io/recipe-book/preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,73 +52,6 @@ img { max-width: 100%; display: block; }
 button, input { font-family: inherit; }
 a { color: inherit; text-decoration: none; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-/* ── GATE ── */
-#gate {
-  position: fixed; inset: 0; z-index: 10000;
-  background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  padding: 20px;
-}
-#gate.hide { animation: gateOut .5s ease forwards; pointer-events: none; }
-@keyframes gateOut { to { opacity: 0; transform: scale(1.02); } }
-.gate-card {
-  width: 100%; max-width: 400px;
-  background: var(--bg2);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 40px 32px;
-  text-align: center;
-  position: relative;
-}
-.gate-card::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 40%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-.gate-lock {
-  width: 56px; height: 56px; margin: 0 auto 20px;
-  background: #1a1a1a; border: 1px solid var(--border);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
-}
-.gate-brand { font-family: var(--display); letter-spacing: 3px; font-size: 12px; color: var(--gold); margin-bottom: 8px; }
-.gate-title { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
-.gate-sub { font-size: 13px; color: var(--text2); margin-bottom: 28px; }
-.gate-input-wrap { position: relative; margin-bottom: 12px; }
-.gate-input-wrap input {
-  width: 100%; background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border); border-radius: 12px;
-  padding: 14px 44px 14px 16px; font-size: 16px; font-weight: 600;
-  color: var(--text); text-align: center; letter-spacing: 4px; outline: none;
-  transition: border-color .2s, background .2s;
-}
-.gate-input-wrap input:focus { border-color: rgba(201,168,76,.45); background: rgba(201,168,76,.04); }
-.gate-input-wrap input.err { border-color: rgba(220,60,60,.5); animation: shake .35s ease; }
-.gate-input-wrap input.ok { border-color: rgba(80,200,120,.5); }
-@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
-.gate-eye {
-  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
-  background: none; border: none; cursor: pointer; font-size: 16px; color: #555; padding: 4px;
-}
-.gate-eye:hover { color: var(--gold); }
-.gate-err { min-height: 20px; font-size: 12px; color: #e05555; margin-bottom: 12px; }
-.gate-btn {
-  width: 100%; background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: #000; border: none; border-radius: 12px; padding: 14px;
-  font-size: 15px; font-weight: 900; cursor: pointer; transition: transform .15s, box-shadow .2s;
-}
-.gate-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,76,.3); }
-.gate-btn:disabled { opacity: .6; pointer-events: none; }
-.gate-success {
-  position: absolute; inset: 0; background: var(--bg); border-radius: 20px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-  opacity: 0; pointer-events: none; transition: opacity .3s;
-}
-.gate-success.show { opacity: 1; pointer-events: all; }
-.gate-check {
-  width: 64px; height: 64px; background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: #000;
-}
 
 /* ── NAV ── */
 .nav {
@@ -414,7 +347,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── PRINT ── */
 @media print {
-  .nav, .hero, .discovery, .filters, .grid, .footer, .btt, #gate, .modal-overlay, .modal-close, .modal-actions, .card-fav { display: none !important; }
+  .nav, .hero, .discovery, .filters, .grid, .footer, .btt, .modal-overlay, .modal-close, .modal-actions, .card-fav { display: none !important; }
   .modal-overlay { position: static; opacity: 1; pointer-events: all; background: white; }
   .modal { max-height: none; transform: none; background: white; color: #111; box-shadow: none; }
   .modal-macro, .modal-tip { border-color: #ddd; }
@@ -426,26 +359,6 @@ a { color: inherit; text-decoration: none; }
 </style>
 </head>
 <body>
-
-<!-- GATE -->
-<div id="gate">
-  <div class="gate-card">
-    <div class="gate-lock">🔐</div>
-    <div class="gate-brand">COACH ANIS</div>
-    <h1 class="gate-title">كتاب الوصفات الخاص</h1>
-    <p class="gate-sub">أدخل كود الدخول للوصول إلى المكتبة</p>
-    <div class="gate-input-wrap">
-      <input type="password" id="gateInput" placeholder="••••••••" maxlength="20" autocomplete="off" spellcheck="false" aria-label="كود الدخول">
-      <button class="gate-eye" id="gateEye" type="button" aria-label="إظهار/إخفاء">👁</button>
-    </div>
-    <div class="gate-err" id="gateErr" role="alert"></div>
-    <button class="gate-btn" id="gateBtn" type="button">دخول ←</button>
-    <div class="gate-success" id="gateSuccess">
-      <div class="gate-check">✓</div>
-      <p style="color:var(--gold);font-weight:700">مرحباً بك</p>
-    </div>
-  </div>
-</div>
 
 <!-- NAV -->
 <nav class="nav" role="navigation" aria-label="القائمة الرئيسية">
@@ -754,66 +667,6 @@ function renderFeatured() {
 }
 
 /* ══════════════════════════════════════
-   GATE
-══════════════════════════════════════ */
-(function initGate() {
-  const CORRECT = '071b490ece953d7b6779b391b526aceaa4f6977a61e516921a380795a6443f29';
-  const input = document.getElementById('gateInput');
-  const btn = document.getElementById('gateBtn');
-  const err = document.getElementById('gateErr');
-  let busy = false;
-
-  document.getElementById('gateEye').addEventListener('click', () => {
-    const vis = input.type === 'text';
-    input.type = vis ? 'password' : 'text';
-    document.getElementById('gateEye').textContent = vis ? '👁' : '🙈';
-  });
-
-  input.addEventListener('keydown', e => {
-    if (e.key === 'Enter') check();
-    err.textContent = '';
-    input.classList.remove('err');
-  });
-  btn.addEventListener('click', check);
-
-  async function check() {
-    if (busy) return;
-    const val = input.value.trim();
-    if (!val) {
-      err.textContent = 'من فضلك أدخل الكود';
-      input.classList.add('err');
-      return;
-    }
-    busy = true;
-    btn.disabled = true;
-    btn.textContent = '...جارٍ التحقق';
-    try {
-      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(val));
-      const hex = [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, '0')).join('');
-      if (hex === CORRECT) {
-        input.classList.add('ok');
-        document.getElementById('gateSuccess').classList.add('show');
-        setTimeout(() => {
-          document.getElementById('gate').classList.add('hide');
-          setTimeout(() => { document.getElementById('gate').style.display = 'none'; }, 500);
-        }, 900);
-      } else {
-        input.classList.add('err');
-        input.value = '';
-        err.textContent = 'الكود غير صحيح، حاول مجدداً';
-        setTimeout(() => { input.classList.remove('err'); err.textContent = ''; }, 2200);
-        input.focus();
-      }
-    } catch (e) {
-      err.textContent = 'حدث خطأ، حاول مجدداً';
-    }
-    busy = false;
-    btn.disabled = false;
-    btn.textContent = 'دخول ←';
-  }
-})();
-
-/* ══════════════════════════════════════
    EVENTS
 ══════════════════════════════════════ */
 document.getElementById('searchInput').addEventListener('input', e => {
@@ -895,8 +748,7 @@ btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth'
 // Deep link
 if (location.hash.startsWith('#recipe-')) {
   const id = +location.hash.replace('#recipe-', '');
-  // open after gate — gate is independent; user must unlock first
-  // we leave it for after unlock; for simplicity open when hash present after gate hidden
+  if (id) setTimeout(() => openRecipe(id), 100);
 }
 
 /* ══════════════════════════════════════
